@@ -1,4 +1,4 @@
-Warhammer Fantasy
+Warhammer Fantasy 4th and 5th Edition Data Files
 =================
 
 #### Contents ####
@@ -9,30 +9,22 @@ Warhammer Fantasy
 ## Overview ##
 [Overview]: #overview
 
-__What's this?__
+__What is this?__
 
-BSData organisation created this project. It's GitHub repository of datafiles.
-Maintained by community, in no way endorsed by BattleScribe. If you want
-to develop - cool! We need you! Take a look at [Getting Started wiki][]
+The Warhammer Fantasy Battles Battlescribe Repository looks unmaintained with over 60 open issues and missing a ton of codexes from earlier timeframes.  Rather than attempt to contribute to an unmaintained project I've split off the project with a focus on just 4th and 5th edition - my favorite editions and the favorite editions of Risk Priestley.
 
-__Okay, nice project. Is it actually working?__ _I just want those files..._
-
-Yeah! We have it hosted on AppSpot. Take a look: [BattleScribe Data on Appspot][]
-
-* __I'd like to contact you to see if I can help out.__
-
-  Then join us on Discord!
-  
-  [![Chat on Discord](https://img.shields.io/discord/558412685981777922?style=popout-square)](https://discord.gg/KqPVhds)
+Additionally since Battlescribe is defunct - we're using New Recruit.  Don't be party pooper and get on this bus - it's a great program and really the successor to Battlescribe.
 
 ## Links ##
 [Links]: #links
 
-* [BattleScribe homepage][]
-* [BattleScribe Data on Appspot][]
-* [Getting Started wiki][]
+* [New Recruit Homepage][]
+* [Carolina First and Only (My Local Gaming Group)][]
+* [List of 4th Edition Books][]
+* [List of 5th Edition Books][]
 
 
-[BattleScribe homepage]: http://www.battlescribe.net/
-[BattleScribe Data on Appspot]: http://battlescribedata.appspot.com/#/repos
-[Getting Started wiki]: https://github.com/BSData/catalogue-development/wiki/Getting-Started#contributing
+[New Recruit homepage]: https://www.newrecruit.eu
+[Carolina First and Only (My Local Gaming Group)]: https://www.carolinafirstandonly.com
+[List of 4th Edition Books]: https://whfb.lexicanum.com/wiki/Army_Books_4th_Edition
+[List of 5th Edition Books]: https://whfb.lexicanum.com/wiki/Army_Books_5th_Edition
