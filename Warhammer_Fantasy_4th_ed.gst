@@ -55,22 +55,22 @@
       <categoryLinks>
         <categoryLink id="f2d7-f8a2-7e14-ef5e" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="false">
           <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="primary-catalogue" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="98ab-f7f1-5fb5-18c3" type="min"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="force" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="98ab-f7f1-5fb5-18c3" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="1821-b8e0-2aa1-b805" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false">
           <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="primary-catalogue" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="562f-9770-dc82-1b05" type="max"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="force" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="562f-9770-dc82-1b05" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="b6e8-eda4-372a-43dd" name="War Machines" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false">
           <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="primary-catalogue" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="abcb-d080-e34a-9d53" type="max"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="force" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="abcb-d080-e34a-9d53" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="abaa-abc3-5162-6a22" name="Monsters" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="false">
           <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="primary-catalogue" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="f140-733f-991c-4d18" type="max"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="force" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="f140-733f-991c-4d18" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="d2a8-1093-ce78-6c29" name="Uncounting" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="false">
@@ -80,7 +80,7 @@
         </categoryLink>
         <categoryLink id="b092-581c-8c03-1f6c" name="Allies" publicationId="d9e7-add3-773e-ffab" hidden="false" targetId="4623-4eae-d0bd-a37f" primary="false">
           <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="primary-catalogue" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="ce4f-dad9-fddb-3308" type="max"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="force" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="ce4f-dad9-fddb-3308" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="43bb-b035-1189-0547" name="Chaos Daemons" hidden="false" targetId="7833-75e4-7c02-f76d" primary="false">
