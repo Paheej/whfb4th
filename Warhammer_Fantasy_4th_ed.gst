@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="7" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="8" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
     <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4e"/>
@@ -56,7 +56,7 @@
       <categoryLinks>
         <categoryLink id="f2d7-f8a2-7e14-ef5e" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="false">
           <constraints>
-            <constraint field="limit::eaa7-6800-e651-8bea" scope="roster" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="98ab-f7f1-5fb5-18c3" type="min"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="roster" value="25" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="98ab-f7f1-5fb5-18c3" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="1821-b8e0-2aa1-b805" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false">
