@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="46a6-49ed-b403-8022" name="Empire 4ed" revision="11" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="46a6-49ed-b403-8022" name="Empire 4ed" revision="12" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="General of the Empire" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -3448,7 +3448,7 @@
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="150"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5351-b23b-90f7-e184" name="Helblaster Volly Gun" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="5351-b23b-90f7-e184" name="Helblaster Volley Gun" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="0144-a171-19d7-fda8" name="Helblaster" hidden="false" targetId="f0e3-abf7-b77e-38e5" type="profile"/>
         <infoLink id="8472-4602-809b-c2b7" name="Crew" hidden="false" targetId="bd1d-542b-7f59-3edd" type="profile"/>
