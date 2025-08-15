@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="46a6-49ed-b403-8022" name="Empire 4ed" revision="12" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="46a6-49ed-b403-8022" name="Empire 4ed" revision="13" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="General of the Empire" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -3553,7 +3553,7 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="015e-f0d1-5fbf-e64e" name="Repeter Hand Gun or Pistol" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="015e-f0d1-5fbf-e64e" name="Repeater Hand Gun or Pistol" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d69-12a0-6d83-c8f7" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1044-8264-a2f9-78ac" type="min"/>
@@ -3669,7 +3669,7 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="1"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6a3d-9268-d04c-1820" name="Dubble-Handed Weapon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6a3d-9268-d04c-1820" name="Double-Handed Weapon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0d3-f184-ce9d-1a1a" type="max"/>
           </constraints>

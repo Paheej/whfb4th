@@ -1410,7 +1410,7 @@ Dark Elves only</description>
       </constraints>
       <rules>
         <rule id="e5ec-1886-b9a3-e44b" name="Obsidian Blade" hidden="false">
-          <description>If wound is scored, victim gets no armour save, and blow destroys his armour. Magic axmour saves as normal, but will be destroyed if it fails.</description>
+          <description>If wound is scored, victim gets no armour save, and blow destroys his armour. Magic armour saves as normal, but will be destroyed if it fails.</description>
         </rule>
       </rules>
       <costs>
