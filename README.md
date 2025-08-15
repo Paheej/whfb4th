@@ -11,7 +11,7 @@ Warhammer Fantasy 4th and 5th Edition Data Files
 
 __What is this?__
 
-The Warhammer Fantasy Battles Battlescribe Repository looks unmaintained with over 60 open issues and missing a ton of codexes from earlier timeframes.  Rather than attempt to contribute to an unmaintained project I've split off the project with a focus on just 4th and 5th edition - my favorite editions and the favorite editions of Risk Priestley.
+The Warhammer Fantasy Battles Battlescribe Repository looks unmaintained with over 60 open issues and missing a ton of codexes from earlier timeframes.  Rather than attempt to contribute to an unmaintained project I've split off the project with a focus on just 4th and 5th edition - my favorite editions and the favorite editions of Rick Priestley.
 
 Additionally since Battlescribe is defunct - we're using New Recruit.  Don't be party pooper and get on this bus - it's a great program and really the successor to Battlescribe.
 
