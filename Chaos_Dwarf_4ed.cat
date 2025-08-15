@@ -679,7 +679,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e19c-dd76-d9a8-c458" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e19c-dd76-d9a8-c458" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63c8-baa3-6326-2cce" type="max"/>
               </constraints>
@@ -863,7 +863,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="5e68-e031-d1b3-8d02" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="5e68-e031-d1b3-8d02" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
                   <conditions>
@@ -1036,7 +1036,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="909a-1e84-2238-07c8" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="909a-1e84-2238-07c8" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
                   <conditions>
@@ -1194,7 +1194,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="41.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="7071-9255-ad17-9475" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7071-9255-ad17-9475" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="388d-1106-9f4d-5e4e" type="max"/>
               </constraints>
@@ -1345,7 +1345,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="6.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2577-1764-9657-6e19" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2577-1764-9657-6e19" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d23e-db31-45a8-17ee" type="max"/>
               </constraints>
@@ -1531,7 +1531,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="5.5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="142f-e442-c066-213c" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="142f-e442-c066-213c" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
                   <conditions>
@@ -1779,7 +1779,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="6124-182d-ae32-f36c" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="bca7-09ec-697e-e406" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="bca7-09ec-697e-e406" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
                   <conditions>
@@ -2074,7 +2074,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="14.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="80ee-af89-4159-6361" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="80ee-af89-4159-6361" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
                   <conditions>
@@ -2261,7 +2261,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="03fa-daee-5111-43d1" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="dbec-d6f1-55e7-275b" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="dbec-d6f1-55e7-275b" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
                   <conditions>
@@ -2625,7 +2625,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="dba8-50fa-f096-a056" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="0852-191c-6063-4c18" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0852-191c-6063-4c18" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="1.0">
                   <conditions>

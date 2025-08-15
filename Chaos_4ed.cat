@@ -51,7 +51,7 @@
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="305.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="036f-9464-f4cf-76a8" name="Battle Standard Berer of Chaos" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="036f-9464-f4cf-76a8" name="Battle Standard Bearer of Chaos" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="3c90-2188-34d7-8682" name="Chaos Hero" hidden="false" targetId="26fa-5b84-ac9c-d4e2" type="profile"/>
       </infoLinks>
@@ -724,7 +724,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="66.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="88b6-c107-358d-1244" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="88b6-c107-358d-1244" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="14.0">
                   <conditions>
@@ -897,7 +897,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="3e92-b342-5063-2f74" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="c9df-a6dd-2c04-0ff4" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c9df-a6dd-2c04-0ff4" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
                   <conditions>
@@ -1144,7 +1144,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="f8af-8ab9-2c3b-1f4c" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="2494-4c59-64fe-f11f" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2494-4c59-64fe-f11f" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
                   <conditions>
@@ -1664,7 +1664,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="2c7f-27b8-05f8-d443" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="5664-7b93-ca81-81b0" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="5664-7b93-ca81-81b0" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
                   <conditions>
@@ -1941,7 +1941,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="7b50-a729-2f00-a388" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="c407-31c0-cad6-a0d3" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c407-31c0-cad6-a0d3" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
                   <conditions>
@@ -2274,7 +2274,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="708b-7a4c-24ae-742b" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="b5e4-402f-2bde-40a7" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b5e4-402f-2bde-40a7" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
                   <conditions>
@@ -2889,7 +2889,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="3c3d-57ed-f9b3-dfc9" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="bad3-df13-f24b-e06e" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="bad3-df13-f24b-e06e" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="363e-4118-9d9c-7a81" type="max"/>
               </constraints>
@@ -2942,7 +2942,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="46e3-3390-d455-18be" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="da57-bc3f-8e38-5112" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="da57-bc3f-8e38-5112" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0aaa-53cf-a843-4497" type="max"/>
               </constraints>
@@ -2965,7 +2965,7 @@
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2561-2093-d9b5-9457" name="Plagueberers of Nurgle" hidden="true" collective="false" import="true" type="unit">
+    <selectionEntry id="2561-2093-d9b5-9457" name="PlagueBearers of Nurgle" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditionGroups>
@@ -2979,7 +2979,7 @@
         </modifier>
       </modifiers>
       <infoLinks>
-        <infoLink id="785d-3f45-7233-8b39" name="Plagueberer" hidden="false" targetId="9087-a2af-ec83-85e2" type="profile"/>
+        <infoLink id="785d-3f45-7233-8b39" name="PlagueBearer" hidden="false" targetId="9087-a2af-ec83-85e2" type="profile"/>
         <infoLink id="5951-3aef-0ae9-e1d3" name="Daemon" hidden="false" targetId="967a-7aca-a2de-84ee" type="rule"/>
         <infoLink id="ec06-5ea7-4875-766d" name="Fear" hidden="false" targetId="11ed-1d0e-39c2-74da" type="rule"/>
         <infoLink id="7a22-35bd-d72b-f9e2" name="Plague Sword" hidden="false" targetId="d20a-e0a5-e180-c7f5" type="rule"/>
@@ -2989,7 +2989,7 @@
         <categoryLink id="cfbf-ca3d-d13b-b184" name="New CategoryLink" hidden="false" targetId="7833-75e4-7c02-f76d" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="041e-371c-0d4a-7266" name="Plagueberer" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="041e-371c-0d4a-7266" name="PlagueBearer" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3fe7-0002-8bfe-41b2" type="min"/>
           </constraints>
@@ -3001,7 +3001,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="3fa4-0871-37d9-7eb9" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="2290-39a5-7deb-b10a" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2290-39a5-7deb-b10a" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c8e-8213-315c-4dd3" type="max"/>
               </constraints>
@@ -3061,7 +3061,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="cbb7-dcd6-c99f-bb66" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="772f-554f-d03c-6327" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="772f-554f-d03c-6327" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d3d-035a-384e-448e" type="max"/>
               </constraints>
@@ -3140,7 +3140,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="3324-137f-17de-73a0" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="f0f9-4351-209f-c7b9" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="f0f9-4351-209f-c7b9" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="25.0">
                   <conditions>
@@ -3213,7 +3213,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="f0eb-4544-5029-5707" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="2c9b-a29d-36ea-6914" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2c9b-a29d-36ea-6914" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22b1-bed5-1c80-7528" type="max"/>
               </constraints>
@@ -3270,7 +3270,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="7075-f415-9009-2072" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="6437-34c8-94df-279d" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="6437-34c8-94df-279d" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd20-b6d3-e187-5269" type="max"/>
               </constraints>
@@ -3330,7 +3330,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="2a3c-c3da-5cc0-8641" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="c136-245c-8158-a702" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="c136-245c-8158-a702" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebac-a542-690b-51c3" type="max"/>
               </constraints>
@@ -3389,7 +3389,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="5981-2f2d-469e-1208" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="7eec-9aee-3b96-8461" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="7eec-9aee-3b96-8461" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="08b0-d412-3e04-b255" type="max"/>
               </constraints>
@@ -5441,7 +5441,7 @@ Is not negated by magical weapons or attacks.</description>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
       </characteristics>
     </profile>
-    <profile id="9087-a2af-ec83-85e2" name="Plagueberer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
+    <profile id="9087-a2af-ec83-85e2" name="PlagueBearer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
       <characteristics>
         <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
         <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>

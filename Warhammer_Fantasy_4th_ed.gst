@@ -432,7 +432,7 @@ Empire Grand Theoganist only</description>
       </constraints>
       <rules>
         <rule id="5d4d-614c-1892-c516" name="Talisman of Ulric" hidden="false">
-          <description>Berer recovers 1 wound at the start of his turn. The Talisman has no effect if the bearer is slain.
+          <description>Bearer recovers 1 wound at the start of his turn. The Talisman has no effect if the bearer is slain.
 Empire Elector Count only</description>
         </rule>
       </rules>

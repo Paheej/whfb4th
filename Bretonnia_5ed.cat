@@ -116,7 +116,7 @@
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be50-d882-d4ee-4673" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="df15-f2e0-34e6-4c38" name="Battle Standard Berer" hidden="false" targetId="7ec4-7e0b-5755-3372" type="profile"/>
+        <infoLink id="df15-f2e0-34e6-4c38" name="Battle Standard Bearer" hidden="false" targetId="7ec4-7e0b-5755-3372" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5766-e7b9-88f1-c462" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
@@ -391,7 +391,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="363e-cd95-a51b-c015" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="363e-cd95-a51b-c015" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4ac-1822-d073-dc5f" type="max"/>
               </constraints>
@@ -608,7 +608,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ca42-1f81-e832-f26e" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="ca42-1f81-e832-f26e" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="801d-2aa6-85c4-8222" type="max"/>
               </constraints>
@@ -822,7 +822,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="e570-0436-eddc-9e37" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e570-0436-eddc-9e37" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1a2-529e-e0ab-b623" type="max"/>
               </constraints>
@@ -1036,7 +1036,7 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="b003-9578-be5b-8d71" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="b003-9578-be5b-8d71" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7065-f50c-6ce3-766a" type="max"/>
               </constraints>
@@ -1277,7 +1277,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="6116-4c3b-814c-d30e" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="cc00-3028-34fd-366b" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="cc00-3028-34fd-366b" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="4.0">
                   <conditions>
@@ -1426,7 +1426,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="b240-36df-69d6-841d" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="cccd-9eb0-b550-4c4b" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="cccd-9eb0-b550-4c4b" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="3.0">
                   <conditions>
@@ -1642,7 +1642,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="0624-9d3d-9533-c718" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="cade-2d7b-47ad-1fe5" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="cade-2d7b-47ad-1fe5" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
                   <conditions>
@@ -1866,7 +1866,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup id="689c-35ad-0a33-78fa" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="2ffc-4975-4585-6ba9" name="Standard Berer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="2ffc-4975-4585-6ba9" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="increment" field="eaa7-6800-e651-8bea" value="2.0">
                   <conditions>
@@ -2955,7 +2955,7 @@ If the Knight&apos;s original attacks hit automatically, then he must still roll
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1"/>
       </characteristics>
     </profile>
-    <profile id="7ec4-7e0b-5755-3372" name="Battle Standard Berer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
+    <profile id="7ec4-7e0b-5755-3372" name="Battle Standard Bearer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
       <characteristics>
         <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
         <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
