@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="9" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="10" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
     <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
@@ -3837,7 +3837,7 @@ Must always test on own leadership value (even accompanied by a character) and d
     <rule id="3c13-eb2e-d86c-b416" name="Pincer attack" hidden="false">
       <description>The Giant Scorpion attacks with its 2 pincers. If both pincers hit, then thay have grabbed hold of their target and the Gigant Scorpion brings its tail down to sting its victims. Where both attacks hit, both hits are therefore resolved at double normal Strength, ie 10 instead of 5. If only one hit is scored this is resolved at the normal Strength of 5.</description>
     </rule>
-    <rule id="f90d-be89-cfb8-33d8" name="Move" hidden="false">
+    <rule id="f90d-be89-cfb8-33d8" name="Spider Move" hidden="false">
       <description>Spiders have eight hairy legs which enable them to move easily over obstacles and rough terrain. Spiders are not slowed down by crossing difficult ground or obstacles.</description>
     </rule>
     <rule id="1110-d8ef-feb1-7b22" name="Scaly Skin" hidden="false">
@@ -3852,8 +3852,8 @@ Must always test on own leadership value (even accompanied by a character) and d
     <rule id="17c7-b850-da89-23c1" name="Bats" hidden="false">
       <description>May Fly up to 8&quot; during their turn.</description>
     </rule>
-    <rule id="0e3b-1fa1-29cd-0960" name="Leadership" hidden="false">
-      <description>This model is immune to all psychology effects and never take break tests if defeted in hand-to-hand combat. This moel will always pass any leadership based test it is required to make.</description>
+    <rule id="0e3b-1fa1-29cd-0960" name="Unbreakable" hidden="false">
+      <description>This model is immune to all psychology effects and never take break tests if defeated in hand-to-hand combat. This model will always pass any leadership based test it is required to make.</description>
     </rule>
     <rule id="50bb-5d95-21fc-6327" name="Dragon&apos;s Breath" hidden="false">
       <description>The dragon&apos;s breath uses the tearsdrop-shaped template unless noted otherwise, and all models under the template is hit on 4+.
