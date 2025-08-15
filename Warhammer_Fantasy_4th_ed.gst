@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="8" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="9" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
-    <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4e"/>
+    <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
   </publications>
   <costTypes>
     <costType id="eaa7-6800-e651-8bea" name="pts" defaultCostLimit="-1"/>
@@ -3813,10 +3813,11 @@ This attack is in addition to the character&apos;s normal attacks, and is made b
       <description>+1 Mounted Armour Save
 -1 Movment</description>
     </rule>
-    <rule id="4ca9-6f52-433a-9848" name="Skirmish" hidden="false">
-      <description>May stand up to 2&quot; from any other member of the unit.
-May move in any direktion and suffer no penalties for crossing obsticles or difficult ground.
--1 to Hit skirmishers with missile weapons.</description>
+    <rule id="4ca9-6f52-433a-9848" name="Skirmish" hidden="false" publicationId="d9e7-add3-773e-ffab" page="90">
+      <description>Models in unit may be positioned up to 2&quot; apart.
+May move in any direction and suffer no penalties for crossing obstacles or difficult ground.
+Enemy units suffer -1 to hit penalty when shooting at skirmishers.
+Must always test on own leadership value (even accompanied by a character) and do not benefit from general&apos;s leadership nor battle standard bearer re-rolls.</description>
     </rule>
     <rule id="11ed-1d0e-39c2-74da" name="Fear" hidden="false">
       <description>This model causes Fear as described in the Psychology section of the Warhammer rulebook</description>
