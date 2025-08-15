@@ -15,6 +15,10 @@ The Warhammer Fantasy Battles Battlescribe Repository looks unmaintained with ov
 
 Additionally since Battlescribe is defunct - we're using New Recruit.  Don't be party pooper and get on this bus - it's a great program and really the successor to Battlescribe.
 
+__How do I use this to build lists?__
+
+Simply head over to the wiki page https://github.com/Paheej/whfb4th/wiki/How-To-Use-This-Repo-With-New-Recruit to see a guide with screenshots on how to point New Recruit to this repository.
+
 ## Links ##
 [Links]: #links
 
