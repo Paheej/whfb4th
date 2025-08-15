@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="10" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="11" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
     <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
@@ -3503,7 +3503,7 @@ This attack is in addition to the character&apos;s normal attacks, and is made b
             <infoLink id="a570-c22e-3d38-70f2" name="Gigantic Spider" hidden="false" targetId="3374-69d1-85ab-fa22" type="profile"/>
             <infoLink id="d773-4f50-1943-8aa8" name="Fear" hidden="false" targetId="11ed-1d0e-39c2-74da" type="rule"/>
             <infoLink id="ebc6-7744-d4a5-5504" name="Chitinous Armour" hidden="false" targetId="a14d-2a2f-e53b-f3d9" type="rule"/>
-            <infoLink id="1487-b257-d5ab-0572" name="Move" hidden="false" targetId="f90d-be89-cfb8-33d8" type="rule"/>
+            <infoLink id="1487-b257-d5ab-0572" name="Spider Move" hidden="false" targetId="f90d-be89-cfb8-33d8" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50"/>
@@ -3554,7 +3554,7 @@ This attack is in addition to the character&apos;s normal attacks, and is made b
       <selectionEntryGroups>
         <selectionEntryGroup id="a52b-1887-e77c-b4a5" name="Swarms" hidden="false" collective="false" import="true" defaultSelectionEntryId="55ef-4a19-e80d-14a9">
           <infoLinks>
-            <infoLink id="d023-d845-31c5-56cd" name="Leadership" hidden="false" targetId="0e3b-1fa1-29cd-0960" type="rule"/>
+            <infoLink id="d023-d845-31c5-56cd" name="Unbreakable" hidden="false" targetId="0e3b-1fa1-29cd-0960" type="rule"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="55ef-4a19-e80d-14a9" name="Rat swarm" hidden="false" collective="false" import="true" type="upgrade">
@@ -3817,7 +3817,7 @@ This attack is in addition to the character&apos;s normal attacks, and is made b
       <description>Models in unit may be positioned up to 2&quot; apart.
 May move in any direction and suffer no penalties for crossing obstacles or difficult ground.
 Enemy units suffer -1 to hit penalty when shooting at skirmishers.
-Must always test on own leadership value (even accompanied by a character) and do not benefit from general&apos;s leadership nor battle standard bearer re-rolls.</description>
+Must always test on own leadership value (even accompanied by a character) and do not benefit from general&apos;s leadership nor battle standard re-rolls.</description>
     </rule>
     <rule id="11ed-1d0e-39c2-74da" name="Fear" hidden="false">
       <description>This model causes Fear as described in the Psychology section of the Warhammer rulebook</description>
