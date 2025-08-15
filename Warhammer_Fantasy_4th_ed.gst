@@ -3997,7 +3997,7 @@ Always Strikes Last
       <characteristics>
         <characteristic name="Range" typeId="0fff-027d-bb98-44cf">30&quot;</characteristic>
         <characteristic name="Strength" typeId="ceb5-bb59-06b6-15b3">4</characteristic>
-        <characteristic name="Rules" typeId="152e-d45a-3e28-26a8">Mlove or Fire</characteristic>
+        <characteristic name="Rules" typeId="152e-d45a-3e28-26a8">Move or Fire</characteristic>
       </characteristics>
     </profile>
     <profile id="a35d-b9f7-336a-169f" name="Repeating Crossbow" hidden="false" typeId="6ca9-f2ff-2648-2744" typeName="Ranged Weapon">
