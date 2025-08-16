@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="11" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="12" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
     <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
@@ -4289,6 +4289,15 @@ Always Strikes Last
     <profile id="2017-abc6-dba2-7bc2" name="Hand Weapon" hidden="false" typeId="f529-f939-d9ca-197e" typeName="Melee Weapon">
       <characteristics>
         <characteristic name="Rules" typeId="b75d-88ae-0d05-d3db">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Pike" typeId="f529-f939-d9ca-197e" typeName="Melee Weapon" hidden="false" id="6b20-05a5-39de-7228">
+      <characteristics>
+        <characteristic name="Rules" typeId="b75d-88ae-0d05-d3db">Fight in four ranks (except when charging then fight in 2 ranks)
+Always strikes first (regardless of charging or initiative order)
++1 Attacks against mounted troops in first round of combat
+Enemy mounted troops suffer -1 attack on the turn they charge
+</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
