@@ -1029,6 +1029,7 @@
         <selectionEntry id="0f46-362e-8f51-5bf4" name="Shield" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d42f-55af-010f-7c5f" type="max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b640-4d95-fdb2-7773"/>
           </constraints>
           <infoLinks>
             <infoLink id="f4da-64ef-6970-ec2b" name="Shield" hidden="false" targetId="6c74-d495-c302-2b9c" type="rule"/>
@@ -1039,7 +1040,8 @@
         </selectionEntry>
         <selectionEntry id="8d80-f3bb-883a-1a28" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ce6-cc42-a1e2-5119" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ce6-cc42-a1e2-5119" type="min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f996-f60f-2b0b-6621"/>
           </constraints>
           <infoLinks>
             <infoLink id="21c5-6522-30c1-b580" name="Heavy Armour" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
