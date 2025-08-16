@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="4" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="5" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -15,7 +15,7 @@
       <selectionEntries>
         <selectionEntry id="be16-bb89-0bc8-71b5" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f6-224b-7295-c4bd" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f6-224b-7295-c4bd" type="max"/>
           </constraints>
           <entryLinks>
             <entryLink id="e534-64bf-dee3-5380" name="Magic Items" hidden="false" collective="false" import="true" targetId="4983-7c3d-6e38-9eec" type="selectionEntryGroup">
@@ -707,18 +707,18 @@
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="aa69-34d7-af8b-e449" name="Wizard" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="aa69-34d7-af8b-e449" name="Hireling Wizard" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink id="3702-5631-416d-4619" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup id="2907-4bd7-7afe-3112" name="Wizard level" hidden="false" collective="false" import="true" defaultSelectionEntryId="a228-ab5b-1e61-ef9d">
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5097-8125-23c6-f6e3" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be9e-a337-fa3d-6f18" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5097-8125-23c6-f6e3-min" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5097-8125-23c6-f6e3-max" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="a228-ab5b-1e61-ef9d" name="Wizard" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a228-ab5b-1e61-ef9d" name="Level 1 - Wizard" hidden="false" collective="false" import="true" type="model" defaultAmount="1">
               <infoLinks>
                 <infoLink id="f494-7f86-4991-b575" name="Wizard" hidden="false" targetId="8a7a-5dc3-7049-7ca7" type="profile"/>
               </infoLinks>
@@ -742,23 +742,11 @@
                   </costs>
                 </selectionEntry>
               </selectionEntries>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="fcee-671b-a8ff-41ca" name="Weapons/Armour" hidden="false" collective="false" import="true">
-                  <entryLinks>
-                    <entryLink id="184f-f9ef-a015-a1e1" name="Missle Weapons" hidden="false" collective="false" import="true" targetId="a0ca-52e8-ffdf-045e" type="selectionEntryGroup"/>
-                    <entryLink id="80dc-79ec-be08-26d9" name="Armour" hidden="false" collective="false" import="true" targetId="920d-1afa-af43-93d6" type="selectionEntryGroup"/>
-                    <entryLink id="351a-5d06-59dd-216a" name="Hand-to-Hand Weapons" hidden="false" collective="false" import="true" targetId="1f39-4a20-8012-f915" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <entryLinks>
-                <entryLink id="12cd-6a8c-5c57-a488" name="Mount" hidden="false" collective="false" import="true" targetId="11ba-e0f6-78eb-75e7" type="selectionEntryGroup"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="56"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="fa6e-4a74-b1e0-fd87" name="Wizard Champion" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="fa6e-4a74-b1e0-fd87" name="Level 2 - Wizard Champion" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="da7c-bc31-048f-3ca4" name="Wizard Champion" hidden="false" targetId="ace1-ca52-8432-149b" type="profile"/>
               </infoLinks>
@@ -782,23 +770,11 @@
                   </costs>
                 </selectionEntry>
               </selectionEntries>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="b65b-21fc-14f8-a09e" name="Weapons/Armour" hidden="false" collective="false" import="true">
-                  <entryLinks>
-                    <entryLink id="a86e-bb3f-a40e-98ff" name="Missle Weapons" hidden="false" collective="false" import="true" targetId="a0ca-52e8-ffdf-045e" type="selectionEntryGroup"/>
-                    <entryLink id="037f-7434-f218-4bce" name="Armour" hidden="false" collective="false" import="true" targetId="920d-1afa-af43-93d6" type="selectionEntryGroup"/>
-                    <entryLink id="fc2f-2fce-3dd1-53f0" name="Hand-to-Hand Weapons" hidden="false" collective="false" import="true" targetId="1f39-4a20-8012-f915" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <entryLinks>
-                <entryLink id="6cfd-dc2b-3bcf-8926" name="Mount" hidden="false" collective="false" import="true" targetId="11ba-e0f6-78eb-75e7" type="selectionEntryGroup"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="118"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9bbf-75e4-27ab-69dd" name="Master Wizard" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="9bbf-75e4-27ab-69dd" name="Level 3 - Master Wizard" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="428e-e5d2-4999-4ef5" name="Master Wizard" hidden="false" targetId="7ca3-e761-5952-1d45" type="profile"/>
               </infoLinks>
@@ -822,23 +798,11 @@
                   </costs>
                 </selectionEntry>
               </selectionEntries>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="e111-1f08-6840-4c0e" name="Weapons/Armour" hidden="false" collective="false" import="true">
-                  <entryLinks>
-                    <entryLink id="b590-11c7-9844-ae8c" name="Missle Weapons" hidden="false" collective="false" import="true" targetId="a0ca-52e8-ffdf-045e" type="selectionEntryGroup"/>
-                    <entryLink id="7aa0-e839-36ea-13fe" name="Armour" hidden="false" collective="false" import="true" targetId="920d-1afa-af43-93d6" type="selectionEntryGroup"/>
-                    <entryLink id="03c0-a1b6-d70c-58a4" name="Hand-to-Hand Weapons" hidden="false" collective="false" import="true" targetId="1f39-4a20-8012-f915" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <entryLinks>
-                <entryLink id="fc0b-222c-a2a3-f13a" name="Mount" hidden="false" collective="false" import="true" targetId="11ba-e0f6-78eb-75e7" type="selectionEntryGroup"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="190"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="a4c0-aa99-9d14-3195" name="Wizard Lord" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="a4c0-aa99-9d14-3195" name="Level 4 - Wizard Lord" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
                 <infoLink id="788b-ac67-36d9-d235" name="Wizard Lord" hidden="false" targetId="ab43-034a-5454-68e5" type="profile"/>
               </infoLinks>
@@ -862,21 +826,37 @@
                   </costs>
                 </selectionEntry>
               </selectionEntries>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="a71e-9d22-4393-fdf4" name="Weapons/Armour" hidden="false" collective="false" import="true">
-                  <entryLinks>
-                    <entryLink id="c476-3bb2-80e9-1183" name="Missle Weapons" hidden="false" collective="false" import="true" targetId="a0ca-52e8-ffdf-045e" type="selectionEntryGroup"/>
-                    <entryLink id="3d4a-9895-34d7-8e91" name="Armour" hidden="false" collective="false" import="true" targetId="920d-1afa-af43-93d6" type="selectionEntryGroup"/>
-                    <entryLink id="1321-8323-4bb6-90ac" name="Hand-to-Hand Weapons" hidden="false" collective="false" import="true" targetId="1f39-4a20-8012-f915" type="selectionEntryGroup"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <entryLinks>
-                <entryLink id="713f-f430-b29b-d677" name="Mount" hidden="false" collective="false" import="true" targetId="11ba-e0f6-78eb-75e7" type="selectionEntryGroup"/>
-              </entryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="287"/>
               </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mount" id="503d-b11d-2f1a-dffb" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Warhorse" hidden="false" id="037d-2df3-57e3-9168" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Warhorse" id="9104-b456-4b17-2446" hidden="false" type="profile" targetId="c2a3-1622-dcb6-00f5"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f4c-b857-fcfd-9e12"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Barding" hidden="false" id="f0a0-1e7b-1a70-0b11">
+                  <infoLinks>
+                    <infoLink name="Barding" id="6d82-52cd-085c-5948" hidden="false" type="rule" targetId="3069-471f-5e53-7c54"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="19c7-e514-a7d8-8be8"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
