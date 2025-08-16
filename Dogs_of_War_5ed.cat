@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="10" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="11" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1434,6 +1434,12 @@ Enemy models in base contact have their weapon skill reduced to 1.</description>
           <description>If the Dragon&apos;s rider is slain then you must roll on the Monster Reaction Table in the Warhammer Rulebook to determine what the Dragon does.  When rolling on this chart add +1 to the dice score.  This means a Dragon will never fly away from battle.  If you roll a 6 then you may choose any result you wish from the Monster Reaction Table.</description>
         </rule>
       </rules>
+      <infoLinks>
+        <infoLink name="Dragon&apos;s Breath" id="47c3-2454-e9bb-bf99" hidden="false" type="rule" targetId="50bb-5d95-21fc-6327"/>
+        <infoLink name="Fly" id="060c-09ed-0988-573a" hidden="false" type="rule" targetId="ad49-ba01-620f-54f5"/>
+        <infoLink name="Terror" id="28f9-b93a-22d4-698e" hidden="false" type="rule" targetId="58dd-1f3f-be5f-5dd1"/>
+        <infoLink name="Scaly Skin" id="5f87-d187-8707-c6df" hidden="false" type="rule" targetId="1110-d8ef-feb1-7b22"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="ae58-a837-f4b3-8239" name="Beorg Bearstruck and the Bearmen of Urslo" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -1591,7 +1597,7 @@ Special save of 4+ against all wounds inflicted upon bearer; save is not modifie
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3dbd-14b4-e0bb-d5f3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <categoryLinks>
-            <categoryLink name="Characters" hidden="false" id="f14f-f284-9ce9-e34a" targetId="48f1-4778-a9db-cde7" primary="false"/>
+            <categoryLink targetId="62d3-efc6-6c2c-634e" id="22af-bff3-1929-b019" primary="false" name="Regiments"/>
           </categoryLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="69"/>
@@ -1615,7 +1621,7 @@ Special save of 4+ against all wounds inflicted upon bearer; save is not modifie
             <infoLink name="Warhorse" id="7312-1fc6-77e9-329d" hidden="false" type="profile" targetId="c2a3-1622-dcb6-00f5"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Galloper Gun" hidden="false" id="bbab-dc70-a050-af63">
+        <selectionEntry type="upgrade" import="true" name="Galloper Gun" hidden="false" id="bbab-dc70-a050-af63">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Mounted Crew" hidden="false" id="bf61-7ac1-a642-a9bf">
               <constraints>
@@ -1855,7 +1861,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <categoryLink name="Characters" hidden="false" id="1b71-64d5-4bc6-2e00" targetId="48f1-4778-a9db-cde7" primary="false"/>
               </categoryLinks>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="46"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="36"/>
               </costs>
               <profiles>
                 <profile name="Roderigo" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="6b94-64c1-7b0b-9cc3">
@@ -2134,10 +2140,10 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a226-d7be-c9c3-c341" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <categoryLinks>
-                <categoryLink name="Characters" hidden="false" id="0792-0ea7-76d5-4933" targetId="48f1-4778-a9db-cde7" primary="false"/>
+                <categoryLink targetId="62d3-efc6-6c2c-634e" id="64e6-15fe-ac2f-9e93" primary="false" name="Regiments"/>
               </categoryLinks>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="79"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="90"/>
               </costs>
               <profiles>
                 <profile name="Daddallo" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="05e6-b499-194d-7ce1">
