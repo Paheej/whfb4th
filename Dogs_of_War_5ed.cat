@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="1" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="2" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -55,7 +55,7 @@
       <selectionEntries>
         <selectionEntry id="e024-639d-dc4a-da40" name="Knights" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8d5-6693-543d-666c" type="min"/>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8d5-6693-543d-666c" type="min"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35"/>
@@ -121,6 +121,30 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="model" import="true" name="Voland" hidden="false" id="c8e3-2bed-6b50-c7ca">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c653-55cd-0584-0d8b-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c653-55cd-0584-0d8b-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Voland" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="335b-2a1d-149f-ffa3">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="14a4-14d5-9f50-3055" name="Command Group" hidden="false" collective="false" import="true">
@@ -131,8 +155,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f033-ac3f-f5e7-4c77-max" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Musician" id="5fdc-0de9-5e7b-1b4d" hidden="false" type="rule" targetId="86d8-c01b-ac40-f462"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry id="6f14-a901-d1b6-a44e" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -140,32 +167,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd83-aae0-99b4-af4d-max" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Venator" hidden="false" id="931d-51cf-37f8-8003">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe9f-b81d-9c8e-6a92-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe9f-b81d-9c8e-6a92-max"/>
-              </constraints>
-              <profiles>
-                <profile name="Voland" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="f1db-d271-5481-4362">
-                  <characteristics>
-                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
-                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
-                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
-                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
-                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
-                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="75"/>
-              </costs>
+              <infoLinks>
+                <infoLink name="Standard" id="4c6c-78ec-8a35-56b3" hidden="false" type="rule" targetId="f881-50eb-7f12-abb8"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
