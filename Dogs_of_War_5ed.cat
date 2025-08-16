@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="8" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="9" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -1215,6 +1215,9 @@ May not deploy within 3&quot; of another unit at the start of the battle.</descr
 All wounds personally scored by Al Muktar count double.  Example: If Al Muktar inflicts 2 wounds and the remaining Desert Dogs inflict 3 wounds their combat score will be 7 before adding bonuses for their standard and flanks.</description>
                     </rule>
                   </rules>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d17-4757-d28a-16f1"/>
+                  </constraints>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntry>
@@ -1277,6 +1280,9 @@ All wounds personally scored by Al Muktar count double.  Example: If Al Muktar 
 +2 Strength in hand-to-hand on turn unit charges</description>
                     </rule>
                   </rules>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a953-55f8-d549-711c"/>
+                  </constraints>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntry>
@@ -1317,6 +1323,117 @@ All wounds personally scored by Al Muktar count double.  Example: If Al Muktar 
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a2c6-a936-edfe-8fa4"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry id="8c1c-ff5a-f35b-3418" name="Asarnil and Deathfang" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="bc0a-919d-c61c-b6bf" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="f752-adf7-395c-3ed2" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5eb-e7ca-780e-1f35" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9728-2a9c-6438-97ae" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="0373-9cda-c644-1b22" name="Sword" hidden="false" targetId="6e77-240c-7324-eef7" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6cc4-b017-5747-06df" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a61-8a6f-97f3-8cd1" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d5d-c286-31c1-c078" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="fb16-5ade-e94f-1a8e" name="Heavy Armour" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="b431-db6a-a6cf-d887" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a49-b6ad-ebf0-9d02" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="29ad-2eb6-1cc8-93da" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="66df-1959-6942-ce26" name="Lance" hidden="false" targetId="9dc5-6237-6584-c240" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dfab-f58d-2814-498d" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f8a-06e8-cc5a-6e8a" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6b3d-9a3a-7a57-01f9" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="d1c2-2909-a576-9047" name="Shield" hidden="false" targetId="6c74-d495-c302-2b9c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Amulet of the Dragonheart" hidden="false" id="94d8-b971-ecd3-f61a">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="45"/>
+          </costs>
+          <rules>
+            <rule name="Amulet of the Dragonheart" id="ea6b-7aee-0841-275b" hidden="false">
+              <description>Enchanted Item
+Enemy models in base contact have their weapon skill reduced to 1.</description>
+            </rule>
+          </rules>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb6c-709c-8152-f295"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="750"/>
+      </costs>
+      <profiles>
+        <profile name="Asarnil" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="74c4-8418-6fd7-99f3">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">5</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">6</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">9</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Deathfang" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="73d7-eeea-303e-b6c0">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">7</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">7</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">7</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">8</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">8</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0186-5c8f-36b7-edf6"/>
+      </constraints>
+      <rules>
+        <rule name="Dragon Tamer" id="9ca3-902e-6be5-4c25" hidden="false">
+          <description>Enemy dragons in hand-to-hand combat must pass a 2D6 leadership test before attacks (the test may use bonuses such as the rider&apos;s or general&apos;s leadership if within range).  If the test is passed the enemy dragon may fight as normal.  If it is failed then the dragon refuses to fight and will not strike blows nor use its breath weapon.  However if the dragon itself is attacked it will fight back.</description>
+        </rule>
+        <rule name="Dragonrage" id="3c65-28d7-5628-ef75" hidden="false">
+          <description>If the Dragon&apos;s rider is slain then you must roll on the Monster Reaction Table in the Warhammer Rulebook to determine what the Dragon does.  When rolling on this chart add +1 to the dice score.  This means a Dragon will never fly away from battle.  If you roll a 6 then you may choose any result you wish from the Monster Reaction Table.</description>
+        </rule>
+      </rules>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
