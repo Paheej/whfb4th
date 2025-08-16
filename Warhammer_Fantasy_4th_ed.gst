@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="12" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="13" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
     <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
@@ -3885,6 +3885,13 @@ Each model hit suffers a wound with no armour saves allowed on a roll of 6 on 1D
     <rule id="84b0-9d5c-5998-920d" name="Regeneration" hidden="false">
       <description>This model regenerates wounds on a 4+. After blows has been struck, roll for each wound lost, even from models that has been killed, one wound is restored for each roll of 4+ and casualties can be returned if enough wounds are regenerated.</description>
     </rule>
+    <rule name="Standard" id="f881-50eb-7f12-abb8" hidden="false" publicationId="d9e7-add3-773e-ffab" page="82">
+      <description>+1 to unit&apos;s combat score</description>
+    </rule>
+    <rule name="Musician" id="86d8-c01b-ac40-f462" hidden="false" publicationId="d9e7-add3-773e-ffab" page="4e: 82 5e: 87">
+      <description>4th Edition: Allows a unit to attempt a reform.
+5th Edition: If a hand-to-hand combat is drawn then each side rolls a D6 for each musician model fighting in the combat. The side which rolls the highest individual score wins the combat by 1 point. If the highest scores are equal then neither side wins and the combat is drawn. If one side has a musician and the other doesn&apos;t, then the side with the musician automatically wins by 1 point.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="728a-8a7a-90f9-4b2b" name="Pegasus" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
@@ -4296,8 +4303,7 @@ Always Strikes Last
         <characteristic name="Rules" typeId="b75d-88ae-0d05-d3db">Fight in four ranks (except when charging then fight in 2 ranks)
 Always strikes first (regardless of charging or initiative order)
 +1 Attacks against mounted troops in first round of combat
-Enemy mounted troops suffer -1 attack on the turn they charge
-</characteristic>
+Enemy mounted troops suffer -1 attack on the turn they charge</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
