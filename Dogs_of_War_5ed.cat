@@ -1858,7 +1858,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="066d-6890-cea2-45c2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <categoryLinks>
-                <categoryLink name="Characters" hidden="false" id="1b71-64d5-4bc6-2e00" targetId="48f1-4778-a9db-cde7" primary="false"/>
+                <categoryLink targetId="62d3-efc6-6c2c-634e" id="ce6e-2215-39e7-4304" primary="false" name="Regiments"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="36"/>
@@ -2247,7 +2247,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e309-f4e9-4ea0-b3c0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <categoryLinks>
-                <categoryLink name="Characters" hidden="false" id="eaf2-c6b7-468f-3a83" targetId="48f1-4778-a9db-cde7" primary="false"/>
+                <categoryLink targetId="62d3-efc6-6c2c-634e" id="3ca3-cd98-cf85-3c02" primary="false" name="Regiments"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="73"/>
@@ -2350,7 +2350,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b311-cf8a-99fd-4650" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <categoryLinks>
-                <categoryLink name="Characters" hidden="false" id="591f-7d91-c975-ac0f" targetId="48f1-4778-a9db-cde7" primary="false"/>
+                <categoryLink targetId="62d3-efc6-6c2c-634e" id="c243-8855-3970-4330" primary="false" name="Regiments"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="70"/>
