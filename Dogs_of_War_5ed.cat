@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="5" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="6" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -209,6 +209,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf7a-185b-eb23-e055"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="c4d6-643e-c884-0e3d" name="Paymaster&apos;s Bodyguard" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -311,6 +314,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb4e-154d-288f-b441"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="a7e0-70ae-f707-3a78" name="Pirazoo&apos;s Lost Legion" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -433,6 +439,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0617-3f40-f0d2-7076"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="6497-e229-d42e-5ff1" name="Paymaster" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -979,6 +988,9 @@
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb53-4842-21a1-d58f"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
