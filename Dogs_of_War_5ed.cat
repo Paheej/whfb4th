@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="2" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="3" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -15,7 +15,7 @@
       <selectionEntries>
         <selectionEntry id="be16-bb89-0bc8-71b5" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f6-224b-7295-c4bd" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="09f6-224b-7295-c4bd" type="max"/>
           </constraints>
           <entryLinks>
             <entryLink id="e534-64bf-dee3-5380" name="Magic Items" hidden="false" collective="false" import="true" targetId="4983-7c3d-6e38-9eec" type="selectionEntryGroup">
@@ -39,7 +39,22 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8cb0-9576-902d-aaa7" name="Mount" hidden="false" collective="false" import="true" targetId="11ba-e0f6-78eb-75e7" type="selectionEntryGroup"/>
+        <entryLink id="8cb0-9576-902d-aaa7" name="Mount" hidden="false" collective="false" import="true" targetId="11ba-e0f6-78eb-75e7" type="selectionEntryGroup">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Warhorse" hidden="false" id="b347-c275-2147-5e36" collective="false" defaultAmount="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bfa-441d-251d-f6b2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Warhorse" id="4a80-1aa1-df92-883c" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile"/>
+                <infoLink name="Barding" id="48b5-111c-5ce9-1ef2" hidden="false" type="rule" targetId="3069-471f-5e53-7c54"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="114"/>
@@ -123,7 +138,7 @@
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Voland" hidden="false" id="c8e3-2bed-6b50-c7ca">
           <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40"/>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="75"/>
           </costs>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c653-55cd-0584-0d8b-min"/>
@@ -155,7 +170,7 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f033-ac3f-f5e7-4c77-max" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
               </costs>
               <infoLinks>
                 <infoLink name="Musician" id="5fdc-0de9-5e7b-1b4d" hidden="false" type="rule" targetId="86d8-c01b-ac40-f462"/>
@@ -167,7 +182,7 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd83-aae0-99b4-af4d-max" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
               </costs>
               <infoLinks>
                 <infoLink name="Standard" id="4c6c-78ec-8a35-56b3" hidden="false" type="rule" targetId="f881-50eb-7f12-abb8"/>
@@ -513,30 +528,18 @@
           <profiles>
             <profile name="Money Lender" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="795c-2562-20b8-e0f4">
               <characteristics>
-                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b"/>
-                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3"/>
-                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c"/>
-                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc"/>
-                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427"/>
-                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404"/>
-                <characteristic name="Initiative" typeId="b418-0e30-644f-1435"/>
-                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd"/>
-                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1"/>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">2</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">6</characteristic>
               </characteristics>
             </profile>
           </profiles>
-        </selectionEntry>
-        <selectionEntry id="26fd-2d37-cc8e-9e45" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f4d-c07c-ccd0-c12b" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8531-86dc-bd34-3b86" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="6481-d64a-b7ff-21d7" name="Sword" hidden="false" targetId="6e77-240c-7324-eef7" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-          </costs>
         </selectionEntry>
         <selectionEntry id="d47a-3d6c-6c71-b685" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -561,19 +564,46 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c7e1-a985-cdd1-606c" name="Weapons/Armour" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="f3a5-511c-9f97-0343" name="Missle Weapons" hidden="false" collective="false" import="true" targetId="a0ca-52e8-ffdf-045e" type="selectionEntryGroup"/>
-            <entryLink id="055b-f123-1694-3a04" name="Armour" hidden="false" collective="false" import="true" targetId="920d-1afa-af43-93d6" type="selectionEntryGroup"/>
-            <entryLink id="75b4-03f8-7514-5a89" name="Hand-to-Hand Weapons" hidden="false" collective="false" import="true" targetId="1f39-4a20-8012-f915" type="selectionEntryGroup"/>
-          </entryLinks>
+        <selectionEntryGroup name="Weapons/Armour" id="b6fc-acc5-e5ab-ba12" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Heavy Armour" hidden="false" id="94f9-4e90-bfd6-5ca1" collective="false" defaultAmount="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b581-93c2-b626-f71f-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b581-93c2-b626-f71f-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Heavy Armour" id="c08f-9319-11a8-b46d" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="fdd8-ce19-b72c-19ea" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e1f-7e33-e0d8-6b41" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a931-2021-a9a1-92b2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Hand Weapon" id="a72b-3c7c-0d0c-bf19" hidden="false" targetId="2017-abc6-dba2-7bc2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="8867-6483-9f1e-56da">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="56cf-a5ed-78b9-e646-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="56cf-a5ed-78b9-e646-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Shield" id="c0ac-2087-a423-b863" hidden="false" type="rule" targetId="6c74-d495-c302-2b9c"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="8619-311a-dc52-3fe1" name="Mount" hidden="false" collective="false" import="true" targetId="11ba-e0f6-78eb-75e7" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="125"/>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="118"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="96c7-541f-4f0d-66f6" name="Mercenary Hero" hidden="false" collective="false" import="true" type="unit">
@@ -601,19 +631,153 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="8841-e66b-0621-dcfa" name="Weapons/Armour" hidden="false" collective="false" import="true">
-          <entryLinks>
-            <entryLink id="bf70-7e16-edbb-91fc" name="Missle Weapons" hidden="false" collective="false" import="true" targetId="a0ca-52e8-ffdf-045e" type="selectionEntryGroup"/>
-            <entryLink id="2900-7db1-25d8-cbe9" name="Armour" hidden="false" collective="false" import="true" targetId="920d-1afa-af43-93d6" type="selectionEntryGroup"/>
-            <entryLink id="1de6-9aff-bead-3f5e" name="Hand-to-Hand Weapons" hidden="false" collective="false" import="true" targetId="1f39-4a20-8012-f915" type="selectionEntryGroup"/>
-          </entryLinks>
+        <selectionEntryGroup name="Mount" id="06f1-5ce7-4f62-3221" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Warhorse" hidden="false" id="3def-b584-03e9-8f64" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Warhorse" id="0a08-5c0c-2dbd-79fa" hidden="false" type="profile" targetId="c2a3-1622-dcb6-00f5"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4787-8a6c-69bf-48ff"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Barding" hidden="false" id="d558-5bcb-503c-02e7">
+                  <infoLinks>
+                    <infoLink name="Barding" id="e5aa-d5e0-db87-9d9e" hidden="false" type="rule" targetId="3069-471f-5e53-7c54"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b0b-1705-9903-108d"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Weapons/Armour" id="4d52-54f0-29e0-3d1b" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="6f9f-6264-0b9b-1a38">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c24b-5378-e001-f654"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Hand to Hand" id="9288-9edf-20a3-4a40" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Additional Hand Weapon" hidden="false" id="d52f-a56f-76d4-908f">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="1"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Additional Hand Weapon" id="b8d9-83ad-7cbb-65aa" hidden="false" type="profile" targetId="836c-6f87-2540-ed02"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Lance" hidden="false" id="133d-68d6-056c-31fd">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Lance" id="4298-8489-3263-75e8" hidden="false" type="profile" targetId="9dc5-6237-6584-c240"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Halberd" hidden="false" id="7d23-f395-e1ea-a9c7">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Halberds" id="d82b-e3ef-ea25-e180" hidden="false" type="profile" targetId="67bc-c025-7aee-b102"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Spear" hidden="false" id="a96c-6afb-46bc-c671">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="1"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Spear (Infantry)" id="0352-e52f-7d9c-75ba" hidden="false" type="profile" targetId="925b-15fa-f0ae-b77b"/>
+                    <infoLink name="Spear (Cavalry)" id="b6d1-2c8a-ca68-f608" hidden="false" type="profile" targetId="55f0-c5a4-2ce1-e9aa"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Double-handed Weapon" hidden="false" id="6056-50b2-77a4-44fb">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Double-handed Weapon" id="c9f9-26cc-0918-d584" hidden="false" type="profile" targetId="04c6-b9f2-69c9-0117"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67cf-eccc-bc2a-806d"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Missile Weapons" id="363b-a2e7-4502-2569" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Bow" hidden="false" id="6adb-2803-2515-7e45">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Bow" id="c341-508b-3eef-235b" hidden="false" type="profile" targetId="c953-8e1b-4426-0702"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="314e-5a07-8435-2e61">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Pistol" id="8a91-d8dc-ba80-4726" hidden="false" type="profile" targetId="9430-109f-c597-e4e5"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Crossbow" hidden="false" id="da5d-84b7-3a1e-c72f">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Crossbow" id="6567-007d-0d31-0378" hidden="false" type="profile" targetId="4fce-d0c8-b657-7e7b"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac62-b9fc-149c-7f18"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Armor" id="7b1f-47a9-888f-d34e" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Light Armour" hidden="false" id="c987-d2bf-3496-85dd">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="2"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Light Armour" id="4d43-ccc4-26a6-33b7" hidden="false" type="rule" targetId="eb59-f399-63e7-5c58"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Heavy Armour" hidden="false" id="8a86-7d08-4ad7-f12b">
+                  <costs>
+                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Heavy Armour" id="e585-f440-082f-e919" hidden="false" type="rule" targetId="d3f1-1df6-89e3-70aa"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="df0e-9760-5854-38d2"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="555a-443f-cefb-d57f" name="Mount" hidden="false" collective="false" import="true" targetId="11ba-e0f6-78eb-75e7" type="selectionEntryGroup"/>
-      </entryLinks>
       <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="68"/>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="aa69-34d7-af8b-e449" name="Wizard" hidden="false" collective="false" import="true" type="unit">
@@ -805,7 +969,7 @@
       <selectionEntries>
         <selectionEntry id="36cb-47f6-8378-6b3e" name="Ogres" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b526-cf84-90c6-ac68" type="min"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b526-cf84-90c6-ac68" type="min"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="44"/>
@@ -835,6 +999,57 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="model" import="true" name="Golgfag" hidden="false" id="75b7-dcdb-2d01-21d3" collective="false" defaultAmount="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6d54-3d76-6a31-0999-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d54-3d76-6a31-0999-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="280"/>
+          </costs>
+          <profiles>
+            <profile name="Golgfag" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="2b78-f109-6e24-0817">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">2</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">5</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">6</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">5</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Skaff" hidden="false" id="ecd0-a8f3-f75f-52c5" collective="false">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ab4c-a41b-1520-2998-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab4c-a41b-1520-2998-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="88"/>
+          </costs>
+          <profiles>
+            <profile name="Skaff" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="fb2f-9178-9065-811d">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">2</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Standard" id="a52f-3a83-1454-00ca" hidden="false" type="rule" targetId="f881-50eb-7f12-abb8"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="68f1-4018-7421-1707" name="Command Group" hidden="false" collective="false" import="true">
@@ -845,94 +1060,11 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d025-14ab-1a6c-cf65-max" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="88"/>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry id="ff78-ac75-06a0-dd97" name="Skaff" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab4c-a41b-1520-2998-min" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab4c-a41b-1520-2998-max" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="88"/>
-              </costs>
-              <profiles>
-                <profile name="Skaff" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="fb2f-9178-9065-811d">
-                  <characteristics>
-                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">2</characteristic>
-                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">5</characteristic>
-                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
-                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry id="b295-7c9d-84a0-d580" name="Golgfag" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d54-3d76-6a31-0999-min" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d54-3d76-6a31-0999-max" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="339c-6406-67b0-0eba" name="Hand weapon" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56d1-d75e-3ca2-2a2d-min" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56d1-d75e-3ca2-2a2d-max" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="ebf2-1460-eb4b-1b82" name="Hand Weapon" hidden="false" targetId="9523-bbef-1abc-de25" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="6f48-28f8-1e0c-8a12" name="Additional Hand Weapon" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07a0-9a05-6cfd-f4b0-min" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="07a0-9a05-6cfd-f4b0-max" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="30f0-584e-336e-0eb8" name="Additional Hand Weapon" hidden="false" targetId="98ff-913e-c067-8954" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="cd72-ab54-5f93-b24a" name="Heavy Armor" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2181-90a8-7dfe-aaee-min" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2181-90a8-7dfe-aaee-max" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="4d66-fcb8-594d-c277" name="Heavy Armour" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="236"/>
-              </costs>
-              <profiles>
-                <profile name="Golgfag" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="2b78-f109-6e24-0817">
-                  <characteristics>
-                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
-                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
-                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">2</characteristic>
-                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">5</characteristic>
-                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">6</characteristic>
-                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
-                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
-                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">5</characteristic>
-                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
+              <infoLinks>
+                <infoLink name="Musician" id="ca3c-7b85-3aaa-81a8" hidden="false" type="rule" targetId="86d8-c01b-ac40-f462"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1009,37 +1141,9 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="25d9-bacc-ac02-3061" name="Barding for steed" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2829-e4ad-bea3-42f2" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="311d-58e3-1cdd-325d" name="Barding" hidden="false" targetId="3069-471f-5e53-7c54" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="4"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="11ba-e0f6-78eb-75e7" name="Mount" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a40c-b3a6-b6f4-0ae2" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="ccd7-2873-39c7-19bb" name="Warhorse" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4303-2093-6a53-f4e7" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="0c4c-1991-ff82-90c0" name="Warhorse" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="7"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
+    <selectionEntryGroup id="11ba-e0f6-78eb-75e7" name="Mount" hidden="false" collective="false" import="true"/>
     <selectionEntryGroup id="1fe5-a243-efe2-6ca9" name="Magic Weapons" hidden="false" collective="false" import="true">
       <categoryLinks>
         <categoryLink id="197e-64b9-f4cd-a4cc" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
@@ -1175,71 +1279,6 @@
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
       </characteristics>
     </profile>
-    <profile id="1812-a01b-e382-04fc" name="Pegasus" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">8</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b106-430b-2630-4c8a" name="Reiksguard Knight" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="789e-0e05-4858-03c0" name="Blazing Sun Knight" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ae12-3257-2076-fc8e" name="White Wolf Knight" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="9f37-59a8-9a39-02b3" name="Spearman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
     <profile id="6e77-240c-7324-eef7" name="Sword" hidden="false" typeId="f529-f939-d9ca-197e" typeName="Melee Weapon">
       <characteristics>
         <characteristic name="Rules" typeId="b75d-88ae-0d05-d3db">-</characteristic>
@@ -1253,84 +1292,6 @@
     <profile id="98ff-913e-c067-8954" name="Additional Hand Weapon" hidden="false" typeId="f529-f939-d9ca-197e" typeName="Melee Weapon">
       <characteristics>
         <characteristic name="Rules" typeId="b75d-88ae-0d05-d3db">+1 Attack</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="a23c-b71a-fd7d-58a5" name="Halberdier" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="cdc5-d764-96f7-5db1" name="Greatsword" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e5c0-484f-013f-454c" name="Swordsmen" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="63ad-f8fa-16db-bbd4" name="Hand Gunners" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="00da-4dde-a9fb-a183" name="Archers" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="d440-19f9-3e06-183d" name="Crossbowmen" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
       </characteristics>
     </profile>
     <profile id="e2fc-96fd-d149-ab43" name="Mercenary Hero" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
@@ -1398,241 +1359,6 @@
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
       </characteristics>
     </profile>
-    <profile id="2130-3134-874e-ee16" name="Champion" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">4</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="d560-3317-bf48-b41c" name="Mortar" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">-</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">-</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">-</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">7</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">-</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">-</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">-</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="bd1d-542b-7f59-3edd" name="Crew" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="014d-561e-8a69-3f3d" name="Great Cannon" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">-</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">-</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">-</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">7</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">-</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">-</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">-</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f6de-36d1-09c2-ca77" name="Steam Tank" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">7</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">10</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">5</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">-</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">-</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="fe5b-a951-93d1-2c2b" name="War Wagon" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">-</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">-</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">7</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">5</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">1</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">-</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">-</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7765-7810-eeca-05ec" name="Crewman" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f0e3-abf7-b77e-38e5" name="Helblaster" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">-</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">-</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">-</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">7</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">-</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">-</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">-</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e653-5af2-b2b2-fd4c" name="Hot Pot" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">-</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">-</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">-</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">-</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">7</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">-</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">-</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">-</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="2833-2134-ba48-e09d" name="Hafling" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">4</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">2</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">2</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="5fde-3b06-31bc-10b4" name="Winged Lancer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e180-2561-24ca-45ca" name="Horse Archer" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">8</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7e4d-8321-5f44-4c7a" name="Pistolier" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">8</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c8c5-9178-16d9-b65e" name="Outrider" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">8</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="5042-402a-1523-903d" name="Reiksguard" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="a809-9970-4f9b-abb6" name="Repeater Hand Gun" hidden="false" typeId="6ca9-f2ff-2648-2744" typeName="Ranged Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="0fff-027d-bb98-44cf">20&quot;</characteristic>
-        <characteristic name="Strength" typeId="ceb5-bb59-06b6-15b3">4</characteristic>
-        <characteristic name="Rules" typeId="152e-d45a-3e28-26a8">Shoot again if hits up to 6 shots, Always mises on roll of 1, -2 Save modifier</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="3409-6648-22ba-5ae6" name="Repeater Pistol" hidden="false" typeId="6ca9-f2ff-2648-2744" typeName="Ranged Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="0fff-027d-bb98-44cf">10&quot;</characteristic>
-        <characteristic name="Strength" typeId="ceb5-bb59-06b6-15b3">4</characteristic>
-        <characteristic name="Rules" typeId="152e-d45a-3e28-26a8">Shoot again if hits up to 6 shots, Always mises on roll of 1, -2 Save modifier, S4 i H-t-H</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="0517-7a5d-9f12-d5c5" name="Flagellant" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="fe1f-b03d-d420-fd5f" name="Dwarf" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">3</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
-      </characteristics>
-    </profile>
     <profile id="2261-8cb7-21e8-23e6" name="Ogre" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
       <characteristics>
         <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
@@ -1644,28 +1370,6 @@
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="9fd8-ef67-adcf-e4c5" name="Hot Pot" hidden="false" typeId="a935-1f6e-0cce-bcf8" typeName="War Machine">
-      <characteristics>
-        <characteristic name="Guess Range" typeId="a2f5-c527-b945-c597">36&quot;</characteristic>
-        <characteristic name="Strength" typeId="a8a0-9324-db44-02bb">5 Direct hit
-3 the rest</characteristic>
-        <characteristic name="Wounds" typeId="ace2-50f7-7ddf-3b27">1</characteristic>
-        <characteristic name="Save" typeId="c073-2165-580c-8b7c">None</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7fdf-6309-de7e-6207" name="Bodyguard" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
-      <characteristics>
-        <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-        <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-        <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">2</characteristic>
-        <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-        <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-        <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-        <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-        <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-        <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
       </characteristics>
     </profile>
     <profile id="b0dc-7a2d-e329-72d8" name="Money Lender" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
