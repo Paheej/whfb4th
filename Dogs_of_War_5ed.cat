@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="11" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="12" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -2184,6 +2184,208 @@ The horse and limber are removed when the gun is destroyed.</description>
           <description>When the Birdmen of Catrazza are flying high, they may shoot at enemy flyers who are also flying high.  This is resolved in the shooting phase, counting a -1 to hit.  Birdmen cannot shoot at enemy on the ground while flying high.</description>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry id="5942-2376-4ac4-f616" name="Braganza&apos;s Besiegers" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="f9ab-613b-e99b-2751" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="63f1-d2f5-ee38-a818" name="Besieger" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a22e-69a6-4298-1a3a" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="13"/>
+          </costs>
+          <profiles>
+            <profile name="Besieger" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="cd93-2e14-bfe2-29c6">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9388-3a67-65e6-7699" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="a28e-5094-a666-8465" name="Musician" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="0">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="479f-6166-594c-6cb0" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b8c-bb4f-0461-ef6a" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="13"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Musician" id="70ac-4c42-cfe4-e6b4" hidden="false" type="rule" targetId="86d8-c01b-ac40-f462"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="a642-5d8e-f15e-8425" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e63c-1c42-d50c-0694" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3901-4fb9-8036-6331" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="13"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Standard" id="6148-a91c-c9de-d22c" hidden="false" type="rule" targetId="f881-50eb-7f12-abb8"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Braganza" hidden="false" id="f137-8e52-95ba-4754" collective="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc5f-1b23-0351-fa78" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e309-f4e9-4ea0-b3c0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink name="Characters" hidden="false" id="eaf2-c6b7-468f-3a83" targetId="48f1-4778-a9db-cde7" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="73"/>
+              </costs>
+              <profiles>
+                <profile name="Braganza" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="4cc8-83d2-f151-1cdc">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
+                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="377f-eabb-5b04-f96e"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="2903-eb4e-7fa2-92db" hidden="false" type="rule" targetId="d3f1-1df6-89e3-70aa"/>
+        <infoLink name="Crossbow" id="fff8-8cfb-c566-1706" hidden="false" type="profile" targetId="4fce-d0c8-b657-7e7b"/>
+        <infoLink name="Hand Weapon" id="9640-dc73-1ef7-36bc" hidden="false" type="profile" targetId="2017-abc6-dba2-7bc2"/>
+      </infoLinks>
+      <rules>
+        <rule name="Pavise" id="3c59-f48c-6acc-bdf8" hidden="false">
+          <description>A pavise is a large shield which each crossbowman can prop up in front of him.  To represent this, crossbowmen equipped with pavises save on a a roll of 3+.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry id="d621-db2b-3bd8-6e57" name="Marksmen of Miragliano" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="4361-02d6-a0fc-159c" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="b273-afe4-5948-017c" name="Marksmen" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5ebf-a7a8-b3f0-41b6" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="11"/>
+          </costs>
+          <profiles>
+            <profile name="Marksmen" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="80b4-8aa8-0216-5596">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">4</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8c42-d56a-b96c-10bd" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="1b9d-bd35-1285-720f" name="Musician" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="0">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7c5f-ef19-1a40-f629" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d7d-e8fd-e5ef-0bfd" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="11"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Musician" id="6ced-fc1d-2900-658c" hidden="false" type="rule" targetId="86d8-c01b-ac40-f462"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="9a14-0d4c-f227-c0ab" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="afc9-70b0-143a-1ce8" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a0c-b62e-420a-8e40" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="11"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Standard" id="5efe-ca66-6019-3c47" hidden="false" type="rule" targetId="f881-50eb-7f12-abb8"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Maximilian" hidden="false" id="09e8-af61-460d-74c4" collective="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="633f-f927-dc10-0c96" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b311-cf8a-99fd-4650" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink name="Characters" hidden="false" id="591f-7d91-c975-ac0f" targetId="48f1-4778-a9db-cde7" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="70"/>
+              </costs>
+              <profiles>
+                <profile name="Maximilian" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="6a93-4e9d-4867-f7e0">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
+                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cbe7-c14a-6c3e-c953"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Crossbow" id="e4b8-c338-837f-8d7e" hidden="false" type="profile" targetId="4fce-d0c8-b657-7e7b"/>
+        <infoLink name="Hand Weapon" id="44b3-312b-58f8-1803" hidden="false" type="profile" targetId="2017-abc6-dba2-7bc2"/>
+        <infoLink name="Skirmish" id="c405-4f91-038c-d375" hidden="false" type="rule" targetId="4ca9-6f52-433a-9848"/>
+        <infoLink name="Light Armour" id="b16b-b0a7-3bb5-0b9b" hidden="false" type="rule" targetId="eb59-f399-63e7-5c58"/>
+      </infoLinks>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
