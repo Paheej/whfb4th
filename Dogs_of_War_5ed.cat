@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="13" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="14" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -59,6 +59,22 @@
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="114"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="0" field="a7ba-92fb-142b-23fb">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="26e7-9e00-390d-6e0a" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="30e7-942e-791b-82dd">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="26e7-9e00-390d-6e0a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="510b-eef8-e95d-7428" name="Voland&apos;s Venators" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -220,7 +236,7 @@
       <selectionEntries>
         <selectionEntry id="af40-8e75-54aa-2c01" name="Bodyguard" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7dc3-80c3-f032-4c3f" type="min"/>
+            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7dc3-80c3-f032-4c3f" type="min"/>
             <constraint type="max" value="20" field="selections" scope="parent" shared="true" id="e1e5-8923-ae97-3b08"/>
           </constraints>
           <costs>
@@ -316,11 +332,18 @@
       </profiles>
       <constraints>
         <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="eb4e-154d-288f-b441"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4c76-03f5-0c01-988c"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="1" field="eb4e-154d-288f-b441">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="6497-e229-d42e-5ff1" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="6d31-3819-13f2-6003" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="4c76-03f5-0c01-988c">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="6d31-3819-13f2-6003" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -456,6 +479,7 @@
       </constraints>
       <infoLinks>
         <infoLink id="8a8e-6ee7-6b24-c68d" name="Paymaster" hidden="false" targetId="e877-5d7c-f21a-8cfa" type="profile"/>
+        <infoLink name="Paymaster" id="b2a1-5fe0-ff15-f88f" hidden="false" type="rule" targetId="599d-cde5-0087-5b1b"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="84e8-a4c8-de4f-a9b1" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
@@ -483,6 +507,9 @@
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Money Lender" id="fae3-ded0-01d6-4f01" hidden="false" type="rule" targetId="0e66-8acf-b90f-f24f"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="d47a-3d6c-6c71-b685" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -548,6 +575,13 @@
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="125"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="0" field="e45a-5fe7-4f3d-7dff">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="6d31-3819-13f2-6003" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="96c7-541f-4f0d-66f6" name="Mercenary Hero" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -2394,6 +2428,758 @@ The horse and limber are removed when the gun is destroyed.</description>
         <infoLink name="Light Armour" id="b16b-b0a7-3bb5-0b9b" hidden="false" type="rule" targetId="eb59-f399-63e7-5c58"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry id="5e9d-3f57-fe3d-db71" name="Borgio the Besieger" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="751e-1c36-3d79-5dc1" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="e4c3-bb0a-f2b3-6b90" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Heavy Armour" hidden="false" id="f82c-208b-675f-1092" collective="false" defaultAmount="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="192e-f6ff-a028-b00d-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="192e-f6ff-a028-b00d-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Heavy Armour" id="2104-5cb3-7c53-d6bc" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="8f1f-bbe8-650c-24db" collective="false" defaultAmount="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fff0-b623-6e48-7367-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fff0-b623-6e48-7367-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Shield" id="f740-a336-2c81-6561" hidden="false" targetId="6c74-d495-c302-2b9c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Barded Warhorse" hidden="false" id="ccd2-496f-635f-d69e">
+          <infoLinks>
+            <infoLink name="Warhorse" id="d4b9-e8f4-1f71-8235" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile"/>
+            <infoLink name="Barding" id="3b23-eb19-f0d1-94f6" hidden="false" type="rule" targetId="3069-471f-5e53-7c54"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="664a-06d2-678b-2b9b-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="664a-06d2-678b-2b9b-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Monstrous Mask Helm" hidden="false" id="d1cb-ed19-ac45-0788" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0587-fdae-f04c-ea30" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec21-5c02-002b-78ab"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Fear" id="b69f-0633-a1aa-82e7" hidden="false" type="rule" targetId="11ed-1d0e-39c2-74da"/>
+          </infoLinks>
+          <rules>
+            <rule name="Monstrous Mask Helm" id="5fe8-4dea-b323-b69c" hidden="false">
+              <description>Magic Armour
+This helm, combined with Borgio&apos;s imposing stature, causes fear as described in the Warhammer Rulebook.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Mace of Might" hidden="false" id="9a13-3d59-ecf1-13d8" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c082-5bd9-80ac-a668" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b51f-2dc5-cfde-a55e"/>
+          </constraints>
+          <rules>
+            <rule name="Mace of Might" id="f65f-58ef-9b8f-8fdb" hidden="false">
+              <description>Magic Weapon
+If Borgio rolls a 6 to hit when fighting with the mace, the mace strikes with a Strength of 10.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Armour of Brazen Bronze" hidden="false" id="b9bd-c70f-9762-ef5a" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0491-c0b0-3cbd-ddc6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2228-ef45-1c37-2f7e"/>
+          </constraints>
+          <rules>
+            <rule name="Armour of Brazen Bronze" id="3cb4-1db4-164c-ebb3" hidden="false">
+              <description>Magic Armour
+This armour disregards opponents&apos; Strength modifiers in hand-to-hand combat and disregards Strength modifiers from missile hit.  This means his armour save will never be worse than 5+.  This even works against war machines that completely ignore armour.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="88"/>
+      </costs>
+      <profiles>
+        <profile name="Borgio" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="e7fa-dbdc-8377-192b">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">6</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="0" field="751e-1c36-3d79-5dc1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="99df-285e-40ad-9e07" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Difficult to Slay" id="b080-fc08-2248-f931" hidden="false">
+          <description>Borgio has a 4+ special save against losing his last wound.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry id="55a9-9d71-d776-0f4d" name="Leonardo da Miragliano" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink name="Warhorse" id="e1c9-910d-b95d-bb06" hidden="false" type="profile" targetId="c2a3-1622-dcb6-00f5"/>
+        <infoLink name="Hand Weapon" id="ee4a-d92e-e167-107c" hidden="false" type="profile" targetId="2017-abc6-dba2-7bc2"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="13ea-d2ed-1b4e-7b51" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Genius" id="414b-6ed5-3f5d-f494" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Artillery Accuracy" hidden="false" id="19ab-95c8-11e7-60dd">
+              <rules>
+                <rule name="Artillery Accuracy" id="6709-9792-36a5-d09b" hidden="false">
+                  <description>Choose one artillery battery in the army before the start of the battle. You may re-roll all misfires in the entire game for that battery. However, if you a roll a misfire on the second roll the artillery piece really has misfired!</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crossbow Accuracy" hidden="false" id="2d64-23cf-e9fd-f07d">
+              <rules>
+                <rule name="Crossbow Accuracy" id="afbc-7f8a-3997-a32b" hidden="false">
+                  <description>Select one friendly unit armed with crossbows before the start of the battle.  Each time that regiment shoots you may re-roll any shots that miss.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Battle Strategy" hidden="false" id="4828-b0fe-d30c-a945">
+              <rules>
+                <rule name="Battle Strategy" id="ca58-b7c3-6a47-4ac5" hidden="false">
+                  <description>Before the battle select one friendly unit.  That unit is not deployed at the start of the battle, instead you may bring it on at the start of any of your turns on either your right or left hand table edge.  The unit is deployed on the edge at the start of the movement phase and may take a normal turn, but may not charge as they will have missed the opportunity to declare charges.  The troops must be placed on the table before the last turn of the game or it is assumed that they have been ambushed, got lost or deserted and your opponent may claim victory points for them as if they were destroyed.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="516e-92d0-3551-2b93"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="177c-f857-330e-5a44"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Scientific Items" id="e7c6-169d-66e2-8f6b" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Sphere of Alchemy" hidden="false" id="c4b5-386b-5373-950b" defaultAmount="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb8e-0542-57a1-2b99"/>
+              </constraints>
+              <profiles>
+                <profile name="Sphere of Alchemy" typeId="6ca9-f2ff-2648-2744" typeName="Ranged Weapon" hidden="false" id="df2a-6999-82d9-d2a9">
+                  <characteristics>
+                    <characteristic name="Range" typeId="0fff-027d-bb98-44cf">2+D6&quot;</characteristic>
+                    <characteristic name="Strength" typeId="ceb5-bb59-06b6-15b3">3</characteristic>
+                    <characteristic name="Rules" typeId="152e-d45a-3e28-26a8">Does not suffer the long range penalty.
+If the ranged attack hits, use the small template to determine the blast area.
+Each model suffers D3 hits with normal armour saves.
+On a miss the sphere has no effect.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Compass of Meteoric Silver" hidden="false" id="6cf7-16fd-d34e-f8c5" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10"/>
+              </costs>
+              <rules>
+                <rule name="Compass of Meteoric Silver" id="acf8-5cd2-6ce7-74d4" hidden="false">
+                  <description>Scientific Item
+At the start of the battle your opponent must point to the unit which has the magic item with the highest points value, but does not have to say what the item is.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd72-c852-db62-82f5"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Prism of Power" hidden="false" id="50be-07ea-abfe-7574" defaultAmount="1">
+              <rules>
+                <rule name="Prism of Power" id="309f-2fef-12df-416b" hidden="false">
+                  <description>Scientific Item
+Roll a dice after the magic cards are dealt.  On a score of 4+ you can remove on random magic card from your opponent&apos;s hand.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="01d8-af78-e32f-96fd"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="155"/>
+      </costs>
+      <profiles>
+        <profile name="Leonardo da Miragliano" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="f4cf-7879-b38d-be23">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Genius" id="df29-b318-bacc-b24d" hidden="false">
+          <description>Before the battle select either:
+Artillery Accuracy
+Battle Strategy
+Crossbow Accuracy</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry id="394b-5ea6-a641-feeb" name="Lucrezzia Belladonna" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="84d2-f94a-447e-c5fb" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Poisonous Items" id="1a34-ec76-4794-a175" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Phial of Poison" hidden="false" id="fce5-1c9c-0d7f-175e">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50"/>
+              </costs>
+              <rules>
+                <rule name="Phial of Poison" id="4ba0-0176-80fb-6af4" hidden="false">
+                  <description>Poisonous Item
+Before the start of the battle, roll a dice for each character in the opposing army starting with the lowest points value and working upwards.  The first character to roll a 1 have been poisoned and suffers 2 wounds immediately, which may slay him (or her) outright or debilitate him in the battle.  No save is possible against the poison.  If no character scores a 1, the poison has failed.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3b2-2a2a-a354-1481"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Stiletto" hidden="false" id="ae65-ce6c-a6de-da17">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50"/>
+              </costs>
+              <rules>
+                <rule name="Poisoned Stiletto" id="10c3-5a53-31dd-cdea" hidden="false">
+                  <description>Poisonous Item
+Lucrezzia may use her stiletto instead of her sword in hand-to-hand combat.  If so, she will strike after her opponent, but any successful hit causes and automatic wound.  The victim may make an armour save as normal.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ea4-3b28-2a11-4006"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Potion of Pavona" hidden="false" id="f2c5-8345-3af2-de5c">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50"/>
+              </costs>
+              <rules>
+                <rule name="Potion of Pavona" id="f922-c26c-0074-0115" hidden="false">
+                  <description>Poisonous Item
+This is a potion which Lucrezzia can give to any character on her own side before the battle, or she can drink it herself.  The effect of the potion enhances D6 characteristics by +1 each (up to a maximum of 10).  You can choose which characters are enhanced, though each may only be improved once.  Lucrezzia will mix up the potion with these in mind, selecting the right ingredients.  However, there is a risk!  The potion may prove slightly poisonous.  To represent this, after you have nominated the character, if you roll a 1 when rolling to see how many characteristics are enhanced the unfortunate victim immediately suffer 1 wound instead of any benefit whatsoever.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1289-656d-e019-967c"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="208"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Poisonous Items" hidden="false" id="841d-8084-6ec6-4519" collective="false">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Warhorse" hidden="false" id="6f46-464c-769d-3362" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Warhorse" id="e85a-1461-3369-abf1" hidden="false" type="profile" targetId="c2a3-1622-dcb6-00f5"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7e1f-8669-9d06-3dc3-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e1f-8669-9d06-3dc3-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Lucrezzia" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="29da-f068-ab6b-0e74">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Expert Poisoner" id="ad29-0254-004b-676d" hidden="false">
+          <description>Lucrezzia has access to items of a poisonous nature rather than magic items.</description>
+        </rule>
+        <rule name="Stunning Beauty" id="ad1f-7ca9-b5ee-0393" hidden="false">
+          <description>Any friendly fleeing unit within 6&quot; of her at the beginning of the her turn will immediately rally, being ashamed to be seen running away from the enemy before such a beautiful and commanding lady.</description>
+        </rule>
+        <rule name="Magic" id="d9f4-8298-0da1-9290" hidden="false">
+          <description>Lucrezzia is a level three wizard with three Battle Magic spells.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry id="6d31-3819-13f2-6003" name="Mydas the Mean" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b9f-af61-905c-9eee" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Paymaster" id="7ae7-f37b-f7d7-fc07" hidden="false" type="rule" targetId="599d-cde5-0087-5b1b"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="85a0-609d-354b-b3cb" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="3a84-415f-042f-67b7" name="Sheikh Yadosh" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5edc-f9fa-4ac4-8023-min" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5edc-f9fa-4ac4-8023-max" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Sheikh Yadosh" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="4df1-d7b2-544e-f266">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">2</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">2</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">6</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Immensely Fat" id="10dc-ac92-bc31-4622" hidden="false">
+              <description>The Sheikh&apos;s girth and coins wrapped around him give him an armour save of 5+.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink name="Moneylender" id="caf7-ab17-88be-3806" hidden="false" type="rule" targetId="0e66-8acf-b90f-f24f"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Treasure Map" hidden="false" id="2510-f1b6-fec2-c2a0" defaultAmount="1">
+          <rules>
+            <rule name="Treasure Map" id="f68c-1447-c207-3738" hidden="false">
+              <description>Enchanted Item
+After deployment but before the first turn of the game, roll a dice to see what Mydas promises the army:
+
+
+1-2: Mydas&apos;s bodyguards gain a bonus of +1 to hit.
+
+
+3-4: Mercenaries may re-roll Break tests if they are within 18&quot; of the pay chest instead of the usual 12&quot;.
+
+
+5-6: All mercenary regiments may add +1 to their combat resolution bonus.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc11-fbfd-e65e-458d"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons/Armour" id="7d05-a516-6714-eff2" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Heavy Armour" hidden="false" id="68aa-2df3-2487-82e3" collective="false" defaultAmount="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="52e1-2808-2f6d-a635-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="52e1-2808-2f6d-a635-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Heavy Armour" id="0520-6132-0687-afbc" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="a229-9775-339d-e747" collective="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cca1-b359-5201-d7e7-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cca1-b359-5201-d7e7-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Hand Weapon" id="7f7d-c6e3-dc52-cf1d" hidden="false" targetId="2017-abc6-dba2-7bc2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="5728-8b3f-6958-a73f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac3c-8613-6790-2707-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac3c-8613-6790-2707-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Shield" id="faaf-6410-867a-f87d" hidden="false" type="rule" targetId="6c74-d495-c302-2b9c"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="125"/>
+      </costs>
+      <profiles>
+        <profile name="Mydas the Mean" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="c1af-1b8c-4396-eab4">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="0" field="2b9f-af61-905c-9eee">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="6497-e229-d42e-5ff1" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry id="e147-bf36-59d9-6092" name="Lorenzo Lupo" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="263c-646f-e924-0dd3" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="b4a9-28f8-b603-5f00" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Heavy Armour" hidden="false" id="cc49-3b75-79bb-abc9" collective="false" defaultAmount="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9587-7524-833f-d0cd-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9587-7524-833f-d0cd-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Heavy Armour" id="40b6-442f-b9ae-5419" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="d028-6a59-7878-987e" collective="false" defaultAmount="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c4fe-c5e0-999c-ecb7-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4fe-c5e0-999c-ecb7-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Shield" id="c184-f348-dcb9-56ae" hidden="false" targetId="6c74-d495-c302-2b9c" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Ring of Luccina" hidden="false" id="f423-b5fb-9028-c2c4" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0506-8ab6-f14a-a94e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6941-f723-78ee-ece8"/>
+          </constraints>
+          <rules>
+            <rule name="Ring of Luccina" id="44ff-9f98-bebb-b32b" hidden="false">
+              <description>Bound Spell
+The gem contains a spell known as the glamour of Luccina, which can be used in any one magic phase, requiring no power to cast.
+
+
+When cast, the Glamour of Luccina will rally all friendly fleeing units within 8&quot; automatically.  The ring sings out an inspiring battle-cry exhorting Luccina&apos;s warriors to uphold their ancient honour, which no true soldier of the city can resist.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sword of Lucan" hidden="false" id="a5aa-ea79-266e-f821" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="25"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="35ef-2ebe-453d-5270" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ca6-bd0d-ab49-8090"/>
+          </constraints>
+          <rules>
+            <rule name="Sword of Lucan" id="5dfe-add9-5473-517a" hidden="false">
+              <description>Magic Weapon
+The sword is magical and will ignore the effects of magical armour.  Magic armour therefore counts as normal armour of its type against the sword, with no unusual effects.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Shield of Myrmidia" hidden="false" id="e0bf-0021-a540-ccca" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d83a-df3a-0fb3-92f5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71ef-9893-1545-2f26"/>
+          </constraints>
+          <rules>
+            <rule name="Shield of Myrmidia" id="adfc-888a-b17c-0ac4" hidden="false">
+              <description>Magic Armour
+In each hand-to-hand combat choose on opponent to lose D3 attacks.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="fc8f-f1ba-26c4-7475">
+          <infoLinks>
+            <infoLink name="Hand Weapon" id="87e2-aa30-bc7f-a4f6" hidden="false" type="profile" targetId="2017-abc6-dba2-7bc2"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="368c-6a5c-d404-d85f-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="368c-6a5c-d404-d85f-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="150"/>
+      </costs>
+      <profiles>
+        <profile name="Lorenzo Lupo" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="4a56-be1f-f094-aff2">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">6</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="0" field="263c-646f-e924-0dd3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="99df-285e-40ad-9e07" shared="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Fights on Foot" id="cfea-92d3-f79d-8fbd" hidden="false">
+          <description>Any Tilean infantry unit accompanied by Lorenzo add +1 to its combat resolution as long as he is in the front rank.</description>
+        </rule>
+        <rule name="Mighty Athlete" id="5fac-409f-56f7-9e2c" hidden="false">
+          <description>Roll a dice before the battle to see which athletic pursuit Lorenzo has been training for recently.
+
+
+1-2: Running, +1 Toughness
+3-4: Wrestling, +1 Attack
+5-6: Weightlifting, +1 Strength</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry id="26e7-9e00-390d-6e0a" name="Marco Colombo" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="712d-069f-1e1b-b80e" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="80f0-4557-4ec8-4d36" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Warhorse" hidden="false" id="1247-e82a-9f66-d809">
+          <infoLinks>
+            <infoLink name="Warhorse" id="40f3-f820-78c1-a7cc" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eb88-a6db-61dd-1fa8-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb88-a6db-61dd-1fa8-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="121"/>
+      </costs>
+      <profiles>
+        <profile name="Marco Colombo" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="d62c-d604-772d-a5bc">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">6</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">6</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Crossbow Hunter" id="f447-9898-363f-ef54" hidden="false">
+          <description>Marco is armed with a crossbow which he can use while mounted and may move and shoot from the saddle.</description>
+        </rule>
+        <rule name="Navigator&apos;s Telescope" id="82bf-c703-ebc3-993a" hidden="false">
+          <description>Marco has a special high-power telescope which he uses at sea.  It is so powerful that he can use it to spy out hidden enemy troops lurking in cover or in the midst of a regiment.  Any troops or characters which would normally count as hidden or unseen until revealed, such as Goblin Fanatics, Dark Elf Assassins or Wood Elf Waywatchers, can be seen by Marco on a dice score of 4+.  Roll at the start of the battle for each enemy unit as Marco scans the enemy battle line.  On a successful score your opponent must reveal the number and type of any hidden troops in that unit.</description>
+        </rule>
+      </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons/Armour" id="9791-3100-8536-e6a9" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="02f6-e502-6c8e-d09c" collective="false" defaultAmount="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="52f7-5685-6eea-0506-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="52f7-5685-6eea-0506-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Shield" id="263b-ade6-eb58-4903" hidden="false" targetId="6c74-d495-c302-2b9c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Lance" hidden="false" id="f370-2fa4-ab63-0d99">
+              <infoLinks>
+                <infoLink name="Lance" id="fc99-ec3f-9966-9610" hidden="false" type="profile" targetId="9dc5-6237-6584-c240"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0990-77c0-9560-80d5-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0990-77c0-9560-80d5-max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crossbow" hidden="false" id="a8d3-4ba3-dd2d-ee2a">
+              <infoLinks>
+                <infoLink name="Crossbow" id="0476-21eb-4f7f-97ba" hidden="false" type="profile" targetId="4fce-d0c8-b657-7e7b"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="44ec-2178-7314-bf40-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44ec-2178-7314-bf40-max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="e63b-d21f-d2a4-ff17">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a22-996d-6833-9581-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a22-996d-6833-9581-max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Hand Weapon" id="89fd-6b5c-1727-9906" hidden="false" type="profile" targetId="2017-abc6-dba2-7bc2"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="New Entry" hidden="false" id="9ecf-2a6a-2c8c-0025">
+              <infoLinks>
+                <infoLink name="Light Armour" id="dc11-299c-1f36-f580" hidden="false" type="rule" targetId="eb59-f399-63e7-5c58"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="61d4-dfa7-2bfb-9ebb-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="61d4-dfa7-2bfb-9ebb-max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Magic Items" id="b77d-ab2b-055b-c648" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Scroll of Araby" hidden="false" id="350e-0a8f-8917-b53e" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3c99-b0b7-eeb2-50ed" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="301b-9635-0522-4cc7"/>
+              </constraints>
+              <rules>
+                <rule name="Scroll of Araby" id="cd43-a5fc-f7e7-e603" hidden="false">
+                  <description>Enchanted Item
+The scroll gives Marco (but not the rest of the unit he is with) a magical save of 2+ against the effect of any spell. However, he will only use it once per turn as a part of the ancient scroll crumbles to dust each time it is used.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gem of Lustria" hidden="false" id="7e3a-e373-0325-62b0" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f7e2-625a-0bff-163f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="95c1-10ea-9ee2-7716"/>
+              </constraints>
+              <rules>
+                <rule name="Gem of Lustria" id="b3e7-207a-52b3-f41f" hidden="false">
+                  <description>Ward
+While wearing this talisman, Marco may re-roll one failed armour save per turn.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gourd of Lustrian Wine" hidden="false" id="a512-d36b-2be4-94c9" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9672-a24d-596a-a495" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e90c-a316-a3e1-3a3e"/>
+              </constraints>
+              <rules>
+                <rule name="Gourd of Lustrian Wine" id="5a03-8b2d-238d-fac0" hidden="false">
+                  <description>Enchanted Item
+A swig from the gourd at the start of his turn will boost Marco&apos;s Strength by +D6 for the rest of that turn.  Marco only has a little of this potent Lustrian brew remaining, so he will only use it once per battle.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="1f39-4a20-8012-f915" name="Hand-to-Hand Weapons" hidden="false" collective="false" import="true">
@@ -2438,34 +3224,7 @@ The horse and limber are removed when the gun is destroyed.</description>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="920d-1afa-af43-93d6" name="Armour" hidden="false" collective="false" import="true">
-      <selectionEntries>
-        <selectionEntry id="0f46-362e-8f51-5bf4" name="Shield" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d42f-55af-010f-7c5f" type="max"/>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b640-4d95-fdb2-7773"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="f4da-64ef-6970-ec2b" name="Shield" hidden="false" targetId="6c74-d495-c302-2b9c" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8d80-f3bb-883a-1a28" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ce6-cc42-a1e2-5119" type="min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f996-f60f-2b0b-6621"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="21c5-6522-30c1-b580" name="Heavy Armour" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
+    <selectionEntryGroup id="920d-1afa-af43-93d6" name="Armour" hidden="false" collective="false" import="true"/>
     <selectionEntryGroup id="11ba-e0f6-78eb-75e7" name="Mount" hidden="false" collective="false" import="true"/>
     <selectionEntryGroup id="1fe5-a243-efe2-6ca9" name="Magic Weapons" hidden="false" collective="false" import="true">
       <categoryLinks>
@@ -2717,4 +3476,12 @@ The horse and limber are removed when the gun is destroyed.</description>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
+  <sharedRules>
+    <rule name="Paymaster" id="599d-cde5-0087-5b1b" hidden="false">
+      <description>Any unit within 12&quot; of the the pay chest can re-roll a failed Break test, if the pay chest is captured or lost the entire mercenary army must take a Panic test, and if the pay chest is captured all mercenary units hate the enemy unit which has captured it.</description>
+    </rule>
+    <rule name="Money Lender" id="0e66-8acf-b90f-f24f" hidden="false">
+      <description>If a Paymaster is accompanied by a Money Lender, any Break Test re-roll is taken with a +1 bonus up to a maximum value of 10.  The Money Lender promises more money and troops cheer and return to the fray (hopefully).</description>
+    </rule>
+  </sharedRules>
 </catalogue>
