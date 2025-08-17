@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="15" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="16" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
     <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
@@ -61,17 +61,17 @@
         </categoryLink>
         <categoryLink id="1821-b8e0-2aa1-b805" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false">
           <constraints>
-            <constraint field="limit::eaa7-6800-e651-8bea" scope="roster" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="562f-9770-dc82-1b05" type="max"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="roster" value="50" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="562f-9770-dc82-1b05" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="b6e8-eda4-372a-43dd" name="War Machines" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false">
           <constraints>
-            <constraint field="limit::eaa7-6800-e651-8bea" scope="roster" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="abcb-d080-e34a-9d53" type="max"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="roster" value="25" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="abcb-d080-e34a-9d53" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="abaa-abc3-5162-6a22" name="Monsters" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="false">
           <constraints>
-            <constraint field="limit::eaa7-6800-e651-8bea" scope="roster" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="f140-733f-991c-4d18" type="max"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="roster" value="25" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="f140-733f-991c-4d18" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="d2a8-1093-ce78-6c29" name="Uncounting" hidden="false" targetId="bdfa-6d6e-a1bf-5d03" primary="false">
@@ -81,7 +81,7 @@
         </categoryLink>
         <categoryLink id="b092-581c-8c03-1f6c" name="Allies" publicationId="d9e7-add3-773e-ffab" hidden="false" targetId="4623-4eae-d0bd-a37f" primary="false">
           <constraints>
-            <constraint field="limit::eaa7-6800-e651-8bea" scope="force" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="ce4f-dad9-fddb-3308" type="max"/>
+            <constraint field="limit::eaa7-6800-e651-8bea" scope="force" value="25" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="ce4f-dad9-fddb-3308" type="max"/>
           </constraints>
         </categoryLink>
         <categoryLink id="43bb-b035-1189-0547" name="Chaos Daemons" hidden="false" targetId="7833-75e4-7c02-f76d" primary="false">
@@ -93,7 +93,7 @@
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="atLeast" value="1" field="forces" scope="c6b9-0ffe-ea97-9214" childId="any" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
