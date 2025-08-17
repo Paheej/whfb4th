@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="14" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="15" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -33,7 +33,11 @@
         <selectionEntryGroup id="eef4-bdfa-13b3-5468" name="Weapons/Armour" hidden="false" collective="false" import="true">
           <entryLinks>
             <entryLink id="7650-cbdf-51d6-06d2" name="Missle Weapons" hidden="false" collective="false" import="true" targetId="a0ca-52e8-ffdf-045e" type="selectionEntryGroup"/>
-            <entryLink id="2d94-847b-e378-a795" name="Armour" hidden="false" collective="false" import="true" targetId="920d-1afa-af43-93d6" type="selectionEntryGroup"/>
+            <entryLink id="2d94-847b-e378-a795" name="Armour" hidden="false" collective="false" import="true" targetId="920d-1afa-af43-93d6" type="selectionEntryGroup">
+              <infoLinks>
+                <infoLink name="Heavy Armour" id="6b41-4fd6-d672-2109" hidden="false" type="rule" targetId="d3f1-1df6-89e3-70aa"/>
+              </infoLinks>
+            </entryLink>
             <entryLink id="7d9c-d0af-00f4-89d6" name="Hand-to-Hand Weapons" hidden="false" collective="false" import="true" targetId="1f39-4a20-8012-f915" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -41,7 +45,7 @@
       <entryLinks>
         <entryLink id="8cb0-9576-902d-aaa7" name="Mount" hidden="false" collective="false" import="true" targetId="11ba-e0f6-78eb-75e7" type="selectionEntryGroup">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Warhorse" hidden="false" id="b347-c275-2147-5e36" collective="false" defaultAmount="1">
+            <selectionEntry type="upgrade" import="true" name="Barded Warhorse" hidden="false" id="b347-c275-2147-5e36" collective="false" defaultAmount="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bfa-441d-251d-f6b2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -63,14 +67,30 @@
         <modifier type="set" value="0" field="a7ba-92fb-142b-23fb">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="a7ba-92fb-142b-23fb">
+          <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="a7ba-92fb-142b-23fb">
+          <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="26e7-9e00-390d-6e0a" shared="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="0" field="30e7-942e-791b-82dd">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="30e7-942e-791b-82dd">
+          <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="30e7-942e-791b-82dd">
+          <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="26e7-9e00-390d-6e0a" shared="true"/>
           </conditions>
         </modifier>
@@ -2541,6 +2561,10 @@ This armour disregards opponents&apos; Strength modifiers in hand-to-hand combat
         <modifier type="set" value="0" field="751e-1c36-3d79-5dc1">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="99df-285e-40ad-9e07" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="751e-1c36-3d79-5dc1">
+          <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
           </conditions>
         </modifier>
@@ -2668,6 +2692,9 @@ Battle Strategy
 Crossbow Accuracy</description>
         </rule>
       </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b04a-7b59-79c9-f1fa"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="394b-5ea6-a641-feeb" name="Lucrezzia Belladonna" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -2676,7 +2703,7 @@ Crossbow Accuracy</description>
       <selectionEntryGroups>
         <selectionEntryGroup name="Poisonous Items" id="1a34-ec76-4794-a175" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Phial of Poison" hidden="false" id="fce5-1c9c-0d7f-175e">
+            <selectionEntry type="upgrade" import="true" name="Phial of Poison" hidden="false" id="fce5-1c9c-0d7f-175e" defaultAmount="1">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50"/>
               </costs>
@@ -2690,7 +2717,7 @@ Before the start of the battle, roll a dice for each character in the opposing a
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3b2-2a2a-a354-1481"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Poisoned Stiletto" hidden="false" id="ae65-ce6c-a6de-da17">
+            <selectionEntry type="upgrade" import="true" name="Poisoned Stiletto" hidden="false" id="ae65-ce6c-a6de-da17" defaultAmount="1">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50"/>
               </costs>
@@ -2704,7 +2731,7 @@ Lucrezzia may use her stiletto instead of her sword in hand-to-hand combat.  If
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ea4-3b28-2a11-4006"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Potion of Pavona" hidden="false" id="f2c5-8345-3af2-de5c">
+            <selectionEntry type="upgrade" import="true" name="Potion of Pavona" hidden="false" id="f2c5-8345-3af2-de5c" defaultAmount="1">
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50"/>
               </costs>
@@ -2725,11 +2752,6 @@ This is a potion which Lucrezzia can give to any character on her own side befor
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="208"/>
       </costs>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Poisonous Items" hidden="false" id="841d-8084-6ec6-4519" collective="false">
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Warhorse" hidden="false" id="6f46-464c-769d-3362" defaultAmount="1">
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
@@ -2769,6 +2791,9 @@ This is a potion which Lucrezzia can give to any character on her own side befor
           <description>Lucrezzia is a level three wizard with three Battle Magic spells.</description>
         </rule>
       </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e60-91cc-217c-fb97"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="6d31-3819-13f2-6003" name="Mydas the Mean" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -3014,6 +3039,10 @@ In each hand-to-hand combat choose on opponent to lose D3 attacks.</description>
         <modifier type="set" value="0" field="263c-646f-e924-0dd3">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="99df-285e-40ad-9e07" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="263c-646f-e924-0dd3">
+          <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
           </conditions>
         </modifier>
