@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="16" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="17" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -92,6 +92,16 @@
         <modifier type="set" value="0" field="30e7-942e-791b-82dd">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="26e7-9e00-390d-6e0a" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="a7ba-92fb-142b-23fb">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="602d-5d55-8d4e-cf08" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="30e7-942e-791b-82dd">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="602d-5d55-8d4e-cf08" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -2572,6 +2582,11 @@ This armour disregards opponents&apos; Strength modifiers in hand-to-hand combat
             <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="751e-1c36-3d79-5dc1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="602d-5d55-8d4e-cf08" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <rules>
         <rule name="Difficult to Slay" id="b080-fc08-2248-f931" hidden="false">
@@ -3050,6 +3065,11 @@ In each hand-to-hand combat choose on opponent to lose D3 attacks.</description>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="263c-646f-e924-0dd3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="602d-5d55-8d4e-cf08" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <rules>
         <rule name="Fights on Foot" id="cfea-92d3-f79d-8fbd" hidden="false">
@@ -3208,6 +3228,266 @@ While wearing this talisman, Marco may re-roll one failed armour save per turn.<
 A swig from the gourd at the start of his turn will boost Marco&apos;s Strength by +D6 for the rest of that turn.  Marco only has a little of this potent Lustrian brew remaining, so he will only use it once per battle.</description>
                 </rule>
               </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry id="c45a-9abd-32fa-489a" name="Lumpin Croop&apos;s Fighting Cocks" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="1f08-abbc-7aa9-943b" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="999a-d6ff-b18c-ea07" name="Halfling" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="8" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2ece-c4a8-9f56-3857" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="9"/>
+          </costs>
+          <profiles>
+            <profile name="Halfling" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="9c5b-a0ab-1d1b-5f9f">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">2</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">2</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="6698-503a-0f54-00f8" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="bc83-5c3d-640b-cbaf" name="Musician" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="0">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="564f-d320-be8f-294f" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="355b-4df7-cf6d-b5ea" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="9"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Musician" id="e8ff-6565-b9a2-bf74" hidden="false" type="rule" targetId="86d8-c01b-ac40-f462"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="4104-e60a-ece5-c2b5" name="Ned Hamfist" hidden="false" collective="false" import="true" type="model" defaultAmount="1">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b748-c820-7070-0057" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d0a9-dfec-c773-530a" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="18"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Standard" id="d734-198e-88e0-a79a" hidden="false" type="rule" targetId="f881-50eb-7f12-abb8"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Ned Hamfist" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="7b41-1a33-a997-b3d1">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">2</characteristic>
+                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
+                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Lumpin Croop" hidden="false" id="1fb1-1fe5-044a-e460" collective="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="259e-a5d1-730d-2f0f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2c0-4044-09de-7531" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink targetId="62d3-efc6-6c2c-634e" id="22cb-7a41-32e3-4db0" primary="false" name="Regiments"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="51"/>
+              </costs>
+              <profiles>
+                <profile name="Lumpin Croop" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="ab3f-1c2e-2268-d772">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
+                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
+                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f1d-799c-ee5a-9443"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Skirmish" id="1ccc-fb10-16c0-3989" hidden="false" type="rule" targetId="4ca9-6f52-433a-9848"/>
+        <infoLink name="Bow" id="c6c7-c6ec-4a4d-cd0d" hidden="false" type="profile" targetId="c953-8e1b-4426-0702"/>
+        <infoLink name="Hand Weapon" id="6fe0-7a2e-ee71-5ff4" hidden="false" type="profile" targetId="2017-abc6-dba2-7bc2"/>
+        <infoLink name="Light Armour" id="ca2d-2091-5acf-863d" hidden="false" type="rule" targetId="eb59-f399-63e7-5c58"/>
+        <infoLink name="Shield" id="3483-5095-5cdd-ef24" hidden="false" type="rule" targetId="6c74-d495-c302-2b9c"/>
+      </infoLinks>
+      <rules>
+        <rule name="Avoid Traps" id="fc2f-03f8-e54d-66a4" hidden="false">
+          <description>Lumpin Croop&apos;s lads are sufficiently expert woodsmen that they can pick their way around Wood Elf Waywatcher traps with ease.  The Wood Elf Waywatcher trap rules described in the Wood Elves Warhammer Armies book do not affect Lumpin Croop&apos;s Fighting Cocks.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry id="602d-5d55-8d4e-cf08" name="Ghazak Khan" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20d6-41e5-3005-9c24" type="max"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink id="0d6c-e0bf-fc5a-1d06" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Warghan" hidden="false" id="c063-95cd-c418-b2c4">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9614-8e19-6fc6-6e67-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9614-8e19-6fc6-6e67-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <rules>
+            <rule name="Warghan" id="7e37-3eae-6113-bc03" hidden="false">
+              <description>Warghan (mount) has a 4+ save due to its thick fur.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile name="Warghan" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="8905-64f5-05f2-4db3">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">9</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">0</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">5</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">5</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">5</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Daemonhead Helmet" hidden="false" id="3ac9-e0ed-905e-00b5" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="aa05-62be-cc94-f5b0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4556-9359-655d-0333"/>
+          </constraints>
+          <rules>
+            <rule name="Daemonhead Helmet" id="e0f0-448c-6706-339c" hidden="false">
+              <description>Magic Armour
+As soon as Ghazak suffers his first wound in battle, the Daemon of the helmet awakes and Ghazak gains a 4+ special save against further wounds, and gains double Strength (8 instead of 4) when fighting against the model which caused the wound.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Red Scimitar" hidden="false" id="e13b-167b-8e3a-dcf1" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="65"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="743c-26d6-b3c6-fdc6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a4f2-56e5-65d3-491a"/>
+          </constraints>
+          <rules>
+            <rule name="Red Scimitar" id="8364-acea-b595-8b10" hidden="false">
+              <description>Magic Weapon
+This weapon has an extra -3 save modifier (-4 with Ghazak&apos;s Strength of 4) and causes D3 wounds per hit.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="185"/>
+      </costs>
+      <profiles>
+        <profile name="Ghazak Khan" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="d132-a9aa-11a4-3e78">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">7</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">6</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">3</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="0" field="20d6-41e5-3005-9c24">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="99df-285e-40ad-9e07" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="20d6-41e5-3005-9c24">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="20d6-41e5-3005-9c24">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons/Armour" id="3fa0-ec86-ac95-6fd9" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="ca53-6aa9-cfca-4516" collective="false" defaultAmount="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1674-96cf-e5d0-6bd9-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1674-96cf-e5d0-6bd9-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Shield" id="50d4-42d8-491e-a2bc" hidden="false" targetId="6c74-d495-c302-2b9c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Armour" hidden="false" id="68ff-cc4b-fa3c-25e0" collective="false" defaultAmount="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0f7a-11e9-1d8f-b31e-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0f7a-11e9-1d8f-b31e-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Heavy Armour" id="1538-d0f0-b8b6-13d8" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bow" hidden="false" id="bef9-6363-abcb-6878">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db78-b495-1c54-2add-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db78-b495-1c54-2add-max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Bow" id="f03b-648e-769d-6aa9" hidden="false" type="profile" targetId="c953-8e1b-4426-0702"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
