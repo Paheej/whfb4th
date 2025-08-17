@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="15" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="16" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -3503,7 +3503,7 @@ A swig from the gourd at the start of his turn will boost Marco&apos;s Strength 
         </categoryLink>
         <categoryLink name="Characters" hidden="false" id="14c2-4c57-baae-af4d" targetId="48f1-4778-a9db-cde7" primary="false">
           <constraints>
-            <constraint type="max" value="35" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="f04f-14c9-6896-f6ff" percentValue="true" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="35" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="f04f-14c9-6896-f6ff" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
