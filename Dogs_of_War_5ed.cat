@@ -358,10 +358,14 @@
         <modifier type="set" value="1" field="eb4e-154d-288f-b441">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="6497-e229-d42e-5ff1" shared="true"/>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="6d31-3819-13f2-6003" shared="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="1" field="4c76-03f5-0c01-988c">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="6d31-3819-13f2-6003" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="eb4e-154d-288f-b441">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="6d31-3819-13f2-6003" shared="true"/>
           </conditions>
