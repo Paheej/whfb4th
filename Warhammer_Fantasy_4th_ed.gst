@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="21" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="22" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
     <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
@@ -143,7 +143,7 @@
         </categoryLink>
         <categoryLink name="Knights" hidden="false" id="c621-eb29-d1d1-b78b" targetId="ca4b-58d9-4d1b-8340" primary="false" type="category">
           <constraints>
-            <constraint type="min" value="0" field="eaa7-6800-e651-8bea" scope="roster" shared="true" id="babf-ebcb-cf0c-a8d6" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+            <constraint type="min" value="0" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="babf-ebcb-cf0c-a8d6" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="25" field="babf-ebcb-cf0c-a8d6">
@@ -155,7 +155,7 @@
         </categoryLink>
         <categoryLink name="Commoners" hidden="false" id="68ee-4f5c-d448-68cc" targetId="f757-c1cf-97a5-5eaa" primary="false" type="category">
           <constraints>
-            <constraint type="max" value="0" field="eaa7-6800-e651-8bea" scope="roster" shared="true" id="69f0-b263-3cb0-d6bb" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+            <constraint type="max" value="0" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="69f0-b263-3cb0-d6bb" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="50" field="69f0-b263-3cb0-d6bb">
