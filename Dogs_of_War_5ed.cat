@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="17" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="18" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -2854,7 +2854,7 @@ This is a potion which Lucrezzia can give to any character on her own side befor
             </rule>
           </rules>
           <infoLinks>
-            <infoLink name="Moneylender" id="caf7-ab17-88be-3806" hidden="false" type="rule" targetId="0e66-8acf-b90f-f24f"/>
+            <infoLink name="Money Lender" id="caf7-ab17-88be-3806" hidden="false" type="rule" targetId="0e66-8acf-b90f-f24f"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Treasure Map" hidden="false" id="2510-f1b6-fec2-c2a0" defaultAmount="1">
@@ -3787,6 +3787,15 @@ This weapon has an extra -3 save modifier (-4 with Ghazak&apos;s Strength of 4) 
           </constraints>
         </categoryLink>
       </categoryLinks>
+      <rules>
+        <rule name="Dogs of War Army Composition" id="7f9b-91e7-99e4-d772" hidden="false">
+          <description>Army Selection
+
+Characters 0-35%
+Regiments 65%+
+</description>
+        </rule>
+      </rules>
     </forceEntry>
   </forceEntries>
   <sharedRules>

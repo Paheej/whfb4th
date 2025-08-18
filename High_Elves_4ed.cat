@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6eea-f2ac-f82f-1a2d" name="High Elves 4ed" revision="5" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="strepj+warhammer4e@gmail.com" authorUrl="carolinafirstandonly.com" type="catalogue">
+<catalogue id="6eea-f2ac-f82f-1a2d" name="High Elves 4ed" revision="6" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="strepj+warhammer4e@gmail.com" authorUrl="carolinafirstandonly.com" type="catalogue">
   <selectionEntries>
     <selectionEntry id="85c0-55aa-05e9-98c8" name="High Elf General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -3883,6 +3883,18 @@ If a spell is cast against the Unicorn rider or a unit he is with, then it is au
           </constraints>
         </categoryLink>
       </categoryLinks>
+      <rules>
+        <rule name="Standard Army Composition" id="6b88-6448-c1ee-cafc" hidden="false">
+          <description>Army Selection
+
+
+Characters 0-50%
+Regiments 25%+
+War Machines 0-25%
+Monsters 0-25%
+Allies 0-25%</description>
+        </rule>
+      </rules>
     </forceEntry>
   </forceEntries>
 </catalogue>

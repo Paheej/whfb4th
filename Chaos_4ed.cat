@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2523-b45c-817a-3f0b" name="Chaos 4ed" revision="4" battleScribeVersion="2.03" authorName="Tilioch" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2523-b45c-817a-3f0b" name="Chaos 4ed" revision="5" battleScribeVersion="2.03" authorName="Tilioch" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="0586-0ab9-c254-40e5" name="Chaos Lord General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -5513,6 +5513,18 @@ Is not negated by magical weapons or attacks.</description>
           </constraints>
         </categoryLink>
       </categoryLinks>
+      <rules>
+        <rule name="Standard Army Composition" id="df6e-261c-98e7-a113" hidden="false">
+          <description>Army Selection
+
+
+Characters 0-50%
+Regiments 25%+
+War Machines 0-25%
+Monsters 0-25%
+Allies 0-25%</description>
+        </rule>
+      </rules>
     </forceEntry>
   </forceEntries>
 </catalogue>

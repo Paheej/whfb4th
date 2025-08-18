@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0960-9080-f057-eb15" name="Dark Elves 4ed" revision="4" battleScribeVersion="2.03" authorName="Tilioch" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0960-9080-f057-eb15" name="Dark Elves 4ed" revision="5" battleScribeVersion="2.03" authorName="Tilioch" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="b0d6-fcd6-b0a5-ece7" name="Dark Elf General" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -3588,6 +3588,18 @@ Use the teardrop-shaped flame template to work out hits. Any model under the tem
           </constraints>
         </categoryLink>
       </categoryLinks>
+      <rules>
+        <rule name="Standard Army Composition" id="a7e5-ca6d-9383-5aa6" hidden="false">
+          <description>Army Selection
+
+
+Characters 0-50%
+Regiments 25%+
+War Machines 0-25%
+Monsters 0-25%
+Allies 0-25%</description>
+        </rule>
+      </rules>
     </forceEntry>
   </forceEntries>
 </catalogue>
