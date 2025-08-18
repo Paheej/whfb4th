@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="18" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="19" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -3773,31 +3773,6 @@ This weapon has an extra -3 save modifier (-4 with Ghazak&apos;s Strength of 4) 
       </characteristics>
     </profile>
   </sharedProfiles>
-  <forceEntries>
-    <forceEntry name="Dogs of War" id="7c30-65f9-67ac-3eea" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Regiments" hidden="false" id="b783-1498-6770-4ab3" targetId="62d3-efc6-6c2c-634e" primary="false">
-          <constraints>
-            <constraint type="min" value="65" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="aa61-c5b1-1e03-c4f9" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Characters" hidden="false" id="14c2-4c57-baae-af4d" targetId="48f1-4778-a9db-cde7" primary="false">
-          <constraints>
-            <constraint type="max" value="35" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="f04f-14c9-6896-f6ff" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-      <rules>
-        <rule name="Dogs of War Army Composition" id="7f9b-91e7-99e4-d772" hidden="false">
-          <description>Army Selection
-
-Characters 0-35%
-Regiments 65%+
-</description>
-        </rule>
-      </rules>
-    </forceEntry>
-  </forceEntries>
   <sharedRules>
     <rule name="Paymaster" id="599d-cde5-0087-5b1b" hidden="false">
       <description>Any unit within 12&quot; of the the pay chest can re-roll a failed Break test, if the pay chest is captured or lost the entire mercenary army must take a Panic test, and if the pay chest is captured all mercenary units hate the enemy unit which has captured it.</description>

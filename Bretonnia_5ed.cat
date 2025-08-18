@@ -1,57 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="cdf0-7390-8a8a-60e1" name="Bretonnia 5ed" revision="5" battleScribeVersion="2.03" authorName="Tilioch" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
-  <categoryEntries>
-    <categoryEntry id="6818-c4f5-b923-bb68" name="Knights" hidden="false"/>
-    <categoryEntry id="f1c0-b42b-c4c9-2efd" name="Commoners" hidden="false"/>
-  </categoryEntries>
-  <forceEntries>
-    <forceEntry id="435e-fb2d-c020-6e82" name="Bretonnia Knightly Army" hidden="false">
-      <categoryLinks>
-        <categoryLink id="42b5-9b4f-13f6-690c" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="false">
-          <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="roster" value="75" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="d721-f6fc-9496-13cb" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="2273-25ce-643e-5427" name="Knights" hidden="false" targetId="6818-c4f5-b923-bb68" primary="false">
-          <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="roster" value="25" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="3975-5f8b-bdbc-e48c" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="e1ba-afca-4c1c-1c0b" name="Commoners" hidden="false" targetId="f1c0-b42b-c4c9-2efd" primary="false">
-          <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="roster" value="50" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="4545-5243-09d2-b028" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="37f4-4cc4-9f9a-869b" name="Monsters" hidden="false" targetId="4a3f-84d1-0495-6ecb" primary="false">
-          <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="roster" value="25" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="ce64-79ca-4348-33d4" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="041d-0321-cedf-c764" name="War Machines" hidden="false" targetId="a3af-995e-0cf1-7091" primary="false">
-          <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="roster" value="0" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="d38c-b76c-5c0e-b3c5" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="1aba-ac5f-fef0-465d" name="Allies" publicationId="d9e7-add3-773e-ffab" hidden="false" targetId="4623-4eae-d0bd-a37f" primary="false">
-          <constraints>
-            <constraint field="eaa7-6800-e651-8bea" scope="roster" value="25" percentValue="true" shared="true" includeChildSelections="true" includeChildForces="false" id="e52f-3c7a-9a8d-d50d" type="max"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-      <rules>
-        <rule name="Bretonnia Army Composition" id="e450-bde6-eefd-d4bf" hidden="false">
-          <description>Army Selection
-
-Characters 0-75%
-Knights 25%+
-Commoners 0-50%
-War Machines None
-Monsters 0-25%
-Allies 0-25%</description>
-        </rule>
-      </rules>
-    </forceEntry>
-  </forceEntries>
+<catalogue id="cdf0-7390-8a8a-60e1" name="Bretonnia 5ed" revision="6" battleScribeVersion="2.03" authorName="Tilioch" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="d7e7-229d-7931-239a" name="General of Bretonnia" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -320,7 +268,7 @@ Allies 0-25%</description>
         <infoLink id="20ba-b545-2301-115d" name="Bretonnian Warhorse" hidden="false" targetId="1879-e265-f77c-6fb1" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="2f36-caf3-8f04-a058" name="Knights" hidden="false" targetId="6818-c4f5-b923-bb68" primary="true"/>
+        <categoryLink targetId="ca4b-58d9-4d1b-8340" id="ba15-63eb-64dc-3b24" primary="true" name="Knights"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e33e-bc5c-53fc-89df" name="Grail Knights" hidden="false" collective="false" import="true" type="model">
@@ -537,7 +485,7 @@ Allies 0-25%</description>
         <infoLink id="eeb3-f757-461f-0043" name="Bretonnian Warhorse" hidden="false" targetId="1879-e265-f77c-6fb1" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="c6ad-8d71-e432-7d6f" name="Knights" hidden="false" targetId="6818-c4f5-b923-bb68" primary="true"/>
+        <categoryLink targetId="ca4b-58d9-4d1b-8340" id="31ce-2352-a1a1-61a1" primary="true" name="Knights"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="718c-64a1-16f1-5991" name="Questing Knights" hidden="false" collective="false" import="true" type="model">
@@ -751,7 +699,7 @@ Allies 0-25%</description>
         <infoLink id="6cf3-d499-7d99-55bc" name="Bretonnian Warhorse" hidden="false" targetId="1879-e265-f77c-6fb1" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="84f0-066e-228b-a28c" name="Knights" hidden="false" targetId="6818-c4f5-b923-bb68" primary="true"/>
+        <categoryLink targetId="ca4b-58d9-4d1b-8340" id="a786-b7db-e35e-8edf" primary="true" name="Knights"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8c7a-c79e-f8ab-e7d6" name="Knights of the Realm" hidden="false" collective="false" import="true" type="model">
@@ -965,7 +913,7 @@ Allies 0-25%</description>
         <infoLink id="b774-ed42-cf60-0330" name="Bretonnian Warhorse" hidden="false" targetId="1879-e265-f77c-6fb1" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="1630-2f63-2252-bbca" name="Knights" hidden="false" targetId="6818-c4f5-b923-bb68" primary="true"/>
+        <categoryLink targetId="ca4b-58d9-4d1b-8340" id="e041-5b3d-2996-07c9" primary="true" name="Knights"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4769-47d7-6ce7-3d35" name="Knights Errant" hidden="false" collective="false" import="true" type="model">
@@ -1190,7 +1138,7 @@ Allies 0-25%</description>
         <infoLink id="92a0-0bfc-cacb-8941" name="Skirmish" hidden="false" targetId="4ca9-6f52-433a-9848" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="8476-7b7d-1350-46f3" name="Commoners" hidden="false" targetId="f1c0-b42b-c4c9-2efd" primary="true"/>
+        <categoryLink targetId="f757-c1cf-97a5-5eaa" id="b34d-ecdc-2a31-0e2b" primary="true" name="Commoners"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8d46-2621-8cb3-5bc6" name="Mounted Squires" hidden="false" collective="false" import="true" type="model">
@@ -1375,7 +1323,7 @@ Allies 0-25%</description>
         <infoLink id="35d8-83e2-91de-c827" name="Skirmish" hidden="false" targetId="4ca9-6f52-433a-9848" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6695-54e7-afe1-058b" name="Commoners" hidden="false" targetId="f1c0-b42b-c4c9-2efd" primary="true"/>
+        <categoryLink targetId="f757-c1cf-97a5-5eaa" id="7821-3b22-0998-7ba5" primary="true" name="Commoners"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3bf1-eb8f-c21d-0f3a" name="Squires" hidden="false" collective="false" import="true" type="model">
@@ -1555,7 +1503,7 @@ Allies 0-25%</description>
         <infoLink id="cff2-3342-f685-d58b" name="Men at Arms" hidden="false" targetId="f865-3bbb-c4d2-faea" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="0391-948a-f2be-b1dc" name="Commoners" hidden="false" targetId="f1c0-b42b-c4c9-2efd" primary="true"/>
+        <categoryLink targetId="f757-c1cf-97a5-5eaa" id="835b-b9b7-f3a2-32dd" primary="true" name="Commoners"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="ed50-1eb0-d108-10b2" name="Men-at-Arms" hidden="false" collective="false" import="true" type="model">
@@ -1821,7 +1769,7 @@ Allies 0-25%</description>
         <infoLink id="660d-cdb9-c244-741c" name="Arrowhead Formation" hidden="false" targetId="a4e5-71e0-4284-785d" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6e1a-a400-200f-8621" name="Commoners" hidden="false" targetId="f1c0-b42b-c4c9-2efd" primary="true"/>
+        <categoryLink targetId="f757-c1cf-97a5-5eaa" id="1e71-6531-b7f2-dd57" primary="true" name="Commoners"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="b311-bc3e-b556-e979" name="Bowmen" hidden="false" collective="false" import="true" type="model">

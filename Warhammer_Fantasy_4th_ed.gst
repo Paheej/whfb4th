@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="20" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="21" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
     <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
@@ -50,6 +50,8 @@
     <categoryEntry id="bdfa-6d6e-a1bf-5d03" name="Uncounting" hidden="false"/>
     <categoryEntry id="4623-4eae-d0bd-a37f" name="Allies" hidden="false"/>
     <categoryEntry id="7833-75e4-7c02-f76d" name="Chaos Daemons" hidden="false"/>
+    <categoryEntry name="Knights" id="ca4b-58d9-4d1b-8340" hidden="false"/>
+    <categoryEntry name="Commoners" id="f757-c1cf-97a5-5eaa" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Standard Army Composition" id="81f2-ac67-2103-6806" hidden="false">
@@ -58,21 +60,64 @@
           <constraints>
             <constraint type="min" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="21cf-8776-862a-7faf" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="65" field="21cf-8776-862a-7faf">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="21cf-8776-862a-7faf">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="cdf0-7390-8a8a-60e1" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Characters" hidden="false" id="83c8-4a45-5cbb-6f20" targetId="48f1-4778-a9db-cde7" primary="false">
           <constraints>
             <constraint type="max" value="50" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="ef0b-58b2-37e8-1bc0" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="35" field="ef0b-58b2-37e8-1bc0">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="75" field="ef0b-58b2-37e8-1bc0">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="cdf0-7390-8a8a-60e1" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="War Machines" hidden="false" id="e534-aae0-d08d-325f" targetId="a3af-995e-0cf1-7091" primary="false">
           <constraints>
             <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="e32e-bfac-db37-279a" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="e32e-bfac-db37-279a">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="cdf0-7390-8a8a-60e1" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Monsters" hidden="false" id="0389-8041-9d80-a6d6" targetId="4a3f-84d1-0495-6ecb" primary="false">
           <constraints>
             <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="ee33-e8cf-fd53-d29f" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="ee33-e8cf-fd53-d29f">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Uncounting" hidden="false" id="f5f4-b793-1c77-8f21" targetId="bdfa-6d6e-a1bf-5d03" primary="false">
           <constraints>
@@ -83,21 +128,44 @@
           <constraints>
             <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="force" shared="true" id="73e0-8a32-920b-2631" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="73e0-8a32-920b-2631">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Chaos Daemons" hidden="false" id="6d5c-da12-65f1-dea9" targetId="7833-75e4-7c02-f76d" primary="false">
           <constraints>
             <constraint type="max" value="50" field="eaa7-6800-e651-8bea" scope="parent" shared="true" id="7df8-c39d-5fc9-d2e5" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
         </categoryLink>
+        <categoryLink name="Knights" hidden="false" id="c621-eb29-d1d1-b78b" targetId="ca4b-58d9-4d1b-8340" primary="false" type="category">
+          <constraints>
+            <constraint type="min" value="0" field="eaa7-6800-e651-8bea" scope="roster" shared="true" id="babf-ebcb-cf0c-a8d6" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="25" field="babf-ebcb-cf0c-a8d6">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="cdf0-7390-8a8a-60e1" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Commoners" hidden="false" id="68ee-4f5c-d448-68cc" targetId="f757-c1cf-97a5-5eaa" primary="false" type="category">
+          <constraints>
+            <constraint type="max" value="0" field="eaa7-6800-e651-8bea" scope="roster" shared="true" id="69f0-b263-3cb0-d6bb" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="50" field="69f0-b263-3cb0-d6bb">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="cdf0-7390-8a8a-60e1" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c6b9-0ffe-ea97-9214" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <rules>
         <rule name="Standard Army Composition" id="55b9-8e70-0008-cbcc" hidden="false">
           <description>Army Selection
@@ -108,6 +176,48 @@ Regiments 25%+
 War Machines 0-25%
 Monsters 0-25%
 Allies 0-25%</description>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="cdf0-7390-8a8a-60e1" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </rule>
+        <rule name="Dogs of War Army Composition" id="4af4-2259-6700-7485" hidden="false">
+          <description>Army Selection
+
+Characters 0-35%
+Regiments 65%+</description>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </rule>
+        <rule name="Bretonnia Army Composition" id="658e-5045-4956-7936" hidden="false">
+          <description>Army Selection
+
+Characters 0-75%
+Knights 25%+
+Commoners 0-50%
+War Machines None
+Monsters 0-25%
+Allies 0-25%</description>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="cdf0-7390-8a8a-60e1" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </rule>
       </rules>
     </forceEntry>
