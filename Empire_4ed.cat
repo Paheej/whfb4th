@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="46a6-49ed-b403-8022" name="Empire 4ed" revision="17" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="46a6-49ed-b403-8022" name="Empire 4ed" revision="18" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="General of the Empire" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -271,7 +271,21 @@
       </constraints>
       <infoLinks>
         <infoLink id="f444-b949-ca48-8079" name="Panter Knight" hidden="false" targetId="33c7-31c5-c53e-a310" type="profile"/>
-        <infoLink id="9d92-f23c-feeb-0e73" name="Warhorse" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile"/>
+        <infoLink id="9d92-f23c-feeb-0e73" name="Warhorse" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile">
+          <modifiers>
+            <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="baca-af00-5bfd-3292" shared="true" includeChildSelections="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="94e2-21c6-5234-d16d" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2e3d-8c19-43fc-9c94" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8255-0e5e-4534-5240" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
