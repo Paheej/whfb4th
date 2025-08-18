@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="46a6-49ed-b403-8022" name="Empire 4ed" revision="16" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="46a6-49ed-b403-8022" name="Empire 4ed" revision="17" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="General of the Empire" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -4494,57 +4494,4 @@
       </characteristics>
     </profile>
   </sharedProfiles>
-  <forceEntries>
-    <forceEntry name="Standard Army Composition" id="720d-4639-95f4-f633" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Regiments" hidden="false" id="5d4d-dd6a-7f0b-3357" targetId="62d3-efc6-6c2c-634e" primary="false">
-          <constraints>
-            <constraint type="min" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="f021-c6c3-631b-f5e2" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Characters" hidden="false" id="b1f3-648e-ae9b-668c" targetId="48f1-4778-a9db-cde7" primary="false">
-          <constraints>
-            <constraint type="max" value="50" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="4f36-2498-0f8b-1f5e" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="War Machines" hidden="false" id="d45c-f170-c349-4f0f" targetId="a3af-995e-0cf1-7091" primary="false">
-          <constraints>
-            <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="420a-23e2-d660-0cb2" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Monsters" hidden="false" id="0e14-9e75-8cfe-fea8" targetId="4a3f-84d1-0495-6ecb" primary="false">
-          <constraints>
-            <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="6739-9570-f77b-816b" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Uncounting" hidden="false" id="c151-f336-74bc-4672" targetId="bdfa-6d6e-a1bf-5d03" primary="false">
-          <constraints>
-            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="7758-4e1d-bfdf-5440" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Allies" hidden="false" id="d429-c819-3b87-15a4" publicationId="d9e7-add3-773e-ffab" targetId="4623-4eae-d0bd-a37f" primary="false">
-          <constraints>
-            <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="force" shared="true" id="c592-76cd-ccc9-c492" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Chaos Daemons" hidden="false" id="e2dc-21c3-472b-4d2a" targetId="7833-75e4-7c02-f76d" primary="false">
-          <constraints>
-            <constraint type="max" value="50" field="eaa7-6800-e651-8bea" scope="parent" shared="true" id="a6f7-50f9-c16b-91d1" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-      <rules>
-        <rule name="Standard Army Composition" id="87df-4a1f-2008-9b7e" hidden="false">
-          <description>Army Selection
-
-
-Characters 0-50%
-Regiments 25%+
-War Machines 0-25%
-Monsters 0-25%
-Allies 0-25%</description>
-        </rule>
-      </rules>
-    </forceEntry>
-  </forceEntries>
 </catalogue>

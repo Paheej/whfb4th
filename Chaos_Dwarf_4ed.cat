@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="30e5-02e2-ca6f-0bfe" name="Chaos Dwarf 4ed" revision="8" battleScribeVersion="2.03" authorName="Tilioch" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="30e5-02e2-ca6f-0bfe" name="Chaos Dwarf 4ed" revision="9" battleScribeVersion="2.03" authorName="Tilioch" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <selectionEntries>
     <selectionEntry id="004c-aa1b-0448-7c45" name="Chaos Dwarf General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -4014,57 +4014,4 @@ Sneaky gits may move an unlimited number of models from rear ranks to lap around
       </characteristics>
     </profile>
   </sharedProfiles>
-  <forceEntries>
-    <forceEntry name="Standard Army Composition" id="16fd-1ac9-e752-7b25" hidden="false">
-      <categoryLinks>
-        <categoryLink name="Regiments" hidden="false" id="3189-5a42-a083-49c5" targetId="62d3-efc6-6c2c-634e" primary="false">
-          <constraints>
-            <constraint type="min" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="12e4-6809-862b-bf07" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Characters" hidden="false" id="c6f9-5cda-f43e-1779" targetId="48f1-4778-a9db-cde7" primary="false">
-          <constraints>
-            <constraint type="max" value="50" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="34cf-ca18-0db9-20f3" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="War Machines" hidden="false" id="f732-31fa-5a73-561c" targetId="a3af-995e-0cf1-7091" primary="false">
-          <constraints>
-            <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="7c07-b037-e6df-b83b" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Monsters" hidden="false" id="6a65-b0e1-de69-7c57" targetId="4a3f-84d1-0495-6ecb" primary="false">
-          <constraints>
-            <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="02ca-5405-8ba5-fa68" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Uncounting" hidden="false" id="8b70-ec8d-9b10-24e0" targetId="bdfa-6d6e-a1bf-5d03" primary="false">
-          <constraints>
-            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="2aea-ab69-85b6-0c4a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Allies" hidden="false" id="d648-50f9-0155-0449" publicationId="d9e7-add3-773e-ffab" targetId="4623-4eae-d0bd-a37f" primary="false">
-          <constraints>
-            <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="force" shared="true" id="1c60-2a25-2be4-0166" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Chaos Daemons" hidden="false" id="257c-c720-c9c7-3885" targetId="7833-75e4-7c02-f76d" primary="false">
-          <constraints>
-            <constraint type="max" value="50" field="eaa7-6800-e651-8bea" scope="parent" shared="true" id="fb3f-1cd6-2061-cf2e" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-      <rules>
-        <rule name="Standard Army Composition" id="0c3d-3f77-38cf-24e7" hidden="false">
-          <description>Army Selection
-
-
-Characters 0-50%
-Regiments 25%+
-War Machines 0-25%
-Monsters 0-25%
-Allies 0-25%</description>
-        </rule>
-      </rules>
-    </forceEntry>
-  </forceEntries>
 </catalogue>

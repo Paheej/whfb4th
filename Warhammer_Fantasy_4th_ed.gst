@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="19" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="20" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
     <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
     <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
@@ -51,6 +51,67 @@
     <categoryEntry id="4623-4eae-d0bd-a37f" name="Allies" hidden="false"/>
     <categoryEntry id="7833-75e4-7c02-f76d" name="Chaos Daemons" hidden="false"/>
   </categoryEntries>
+  <forceEntries>
+    <forceEntry name="Standard Army Composition" id="81f2-ac67-2103-6806" hidden="false">
+      <categoryLinks>
+        <categoryLink name="Regiments" hidden="false" id="0f05-1dcc-e0ad-8d5d" targetId="62d3-efc6-6c2c-634e" primary="false">
+          <constraints>
+            <constraint type="min" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="21cf-8776-862a-7faf" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Characters" hidden="false" id="83c8-4a45-5cbb-6f20" targetId="48f1-4778-a9db-cde7" primary="false">
+          <constraints>
+            <constraint type="max" value="50" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="ef0b-58b2-37e8-1bc0" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="War Machines" hidden="false" id="e534-aae0-d08d-325f" targetId="a3af-995e-0cf1-7091" primary="false">
+          <constraints>
+            <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="e32e-bfac-db37-279a" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Monsters" hidden="false" id="0389-8041-9d80-a6d6" targetId="4a3f-84d1-0495-6ecb" primary="false">
+          <constraints>
+            <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="ee33-e8cf-fd53-d29f" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Uncounting" hidden="false" id="f5f4-b793-1c77-8f21" targetId="bdfa-6d6e-a1bf-5d03" primary="false">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="a35a-2dd5-ae16-5016" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Allies" hidden="false" id="3ce9-124b-4b07-bc8f" publicationId="d9e7-add3-773e-ffab" targetId="4623-4eae-d0bd-a37f" primary="false">
+          <constraints>
+            <constraint type="max" value="25" field="limit::eaa7-6800-e651-8bea" scope="force" shared="true" id="73e0-8a32-920b-2631" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Chaos Daemons" hidden="false" id="6d5c-da12-65f1-dea9" targetId="7833-75e4-7c02-f76d" primary="false">
+          <constraints>
+            <constraint type="max" value="50" field="eaa7-6800-e651-8bea" scope="parent" shared="true" id="7df8-c39d-5fc9-d2e5" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c6b9-0ffe-ea97-9214" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c6b9-0ffe-ea97-9214" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Standard Army Composition" id="55b9-8e70-0008-cbcc" hidden="false">
+          <description>Army Selection
+
+
+Characters 0-50%
+Regiments 25%+
+War Machines 0-25%
+Monsters 0-25%
+Allies 0-25%</description>
+        </rule>
+      </rules>
+    </forceEntry>
+  </forceEntries>
   <sharedSelectionEntries>
     <selectionEntry id="d188-e74c-59e6-bf35" name="Black Armour of Nagash" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
