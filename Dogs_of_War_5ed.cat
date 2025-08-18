@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="20" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="21" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -2080,102 +2080,103 @@ The horse and limber are removed when the gun is destroyed.</description>
         <infoLink name="Pike" id="beb3-090b-d51a-28e0" hidden="false" type="profile" targetId="6b20-05a5-39de-7228"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry id="96c1-bc83-10f2-0f11" name="Ricco&apos;s Republican Guard" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="96c1-bc83-10f2-0f11" name="Giants of Albion" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink id="1502-396a-f50c-7831" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="5da0-5492-5dc2-cc78" name="Pikemen" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry type="model" import="true" name="Bolgos" hidden="false" id="e7f4-931b-8b78-c07f">
           <constraints>
-            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eda5-c13a-8f14-96a5" type="min"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ee25-d527-05b7-a06f-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee25-d527-05b7-a06f-max"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12"/>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
           </costs>
+          <profiles>
+            <profile name="Bolgos" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="026e-7ee0-67aa-e9d7">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">7</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">6</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">S</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">6</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Cachtorr" hidden="false" id="3293-fa71-84b8-1763">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71f6-1979-ebea-9917-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71f6-1979-ebea-9917-max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Cachtorr" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="5133-c204-4f73-eddb">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">6</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">7</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">6</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">6</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">S</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">6</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Hengus the Druid" hidden="false" id="3eae-30b3-017f-d497">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da2f-4076-5628-c2fe-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da2f-4076-5628-c2fe-max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Hengus the Druid" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="b5a5-7cd4-564c-1535">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">3</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Oggum Staff" id="3fc8-f5f9-bdc6-cb17" hidden="false">
+              <description>Hengus has an Oggum Staff, which is a special kind of magic item made by the Druids of Albion.  Not only do the Oggum marks on the staff endow the bearer with power over Giants to make them serve him, but they also protect the owner from harm.  To represent this, Hengus has a special save of 4+ against wounds caused in any way whatsoever.</description>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="04b1-b098-3891-d278" name="Command Group" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="857e-8a71-1d79-df50" name="Musician" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="0">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a2f4-c060-d03e-b0fe" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f33-adde-56a6-40df" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Musician" id="4f70-4781-513f-c413" hidden="false" type="rule" targetId="86d8-c01b-ac40-f462"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry id="2efe-e9ea-eb8f-b92f" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2be9-1674-21bc-d192" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="61e6-76dd-4170-5731" type="max"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Standard" id="8284-769f-f251-392d" hidden="false" type="rule" targetId="f881-50eb-7f12-abb8"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="model" import="true" name="Ricco" hidden="false" id="399e-6659-3a56-4bfa" collective="false">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="61bc-5790-cd9c-5cf5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c45-cb4a-a8ba-f9a5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <categoryLinks>
-                <categoryLink name="Characters" hidden="false" id="fd78-94dc-1b15-c284" targetId="48f1-4778-a9db-cde7" primary="false"/>
-              </categoryLinks>
-              <costs>
-                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="69"/>
-              </costs>
-              <profiles>
-                <profile name="Ricco" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="bb19-0fe1-e67a-48a0">
-                  <characteristics>
-                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
-                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
-                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
-                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
-                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
-                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
-                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
-                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="495"/>
       </costs>
-      <profiles>
-        <profile name="Pikemen" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="d5c6-6f97-94bb-6cf3">
-          <characteristics>
-            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
-            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
-            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
-            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
-            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
-            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
-            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
-            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba77-42ae-3076-ed3f"/>
       </constraints>
-      <infoLinks>
-        <infoLink name="Heavy Armour" id="1299-7f81-b454-d9b0" hidden="false" type="rule" targetId="d3f1-1df6-89e3-70aa"/>
-        <infoLink name="Pike" id="9176-4a1e-c41a-4c41" hidden="false" type="profile" targetId="6b20-05a5-39de-7228"/>
-      </infoLinks>
+      <rules>
+        <rule name="Giant Special Rules" id="40af-4ee9-1204-778a" hidden="false">
+          <description>Cachtorr and Bologs are Giants and subject to the special rules for Giants (see Warhammer Battle Book p126).  Hengus the Druid is a level 1 wizard and uses battle magic.</description>
+        </rule>
+        <rule name="Independent Models" id="554b-83d5-0954-ac25" hidden="false">
+          <description>Hengus, Cachtorr and Bologs are individual models and can move independently, though they may not join regiments.  The enemy is awarded 2 victory points for each Giant slain and 1 victory point for killing Hengus.  As long as the Giants are within 6&quot; of Hengus, they may use his leadership and are immune to Panic tests.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry id="6747-ff78-5873-57f1" name="Birdmen of Catrazza" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -3837,6 +3838,214 @@ If the Wolfboyz defeat their enemies in hand-to-hand combat, and elect to pursue
         </rule>
         <rule name="Blessed by the Old Ones" id="3f00-df05-de84-80f9" hidden="false">
           <description>Hand-to-hand opponents will never pursue Tichi-Huichi&apos;s Raiders if they beat them in combat.  A strange, tropical fatigue descends on the foe, securing Tichi-Huichi&apos;s chance to get away and live to fight another day.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry id="fe50-c61d-8ed7-91e2" name="Ricco&apos;s Republican Guard" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="12a3-ce7b-6fa4-3b82" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="8557-d8e3-c4a7-28bf" name="Pikemen" hidden="false" collective="false" import="true" type="model">
+          <constraints>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="921c-57d6-0be2-06ae" type="min"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="1b4e-e605-63cf-2600" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="491f-3b12-b4b5-8be4" name="Musician" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="0">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dd43-e87e-2e98-ecd6" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f5b-9b4f-9e55-c9e3" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Musician" id="6097-ce06-c77e-a65c" hidden="false" type="rule" targetId="86d8-c01b-ac40-f462"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="a7ba-b243-96e1-4a4c" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade" defaultAmount="1">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fff6-2991-6bf8-5ae4" type="min"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94d9-0b30-a9bf-3772" type="max"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="12"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Standard" id="0c5b-117a-6308-d56b" hidden="false" type="rule" targetId="f881-50eb-7f12-abb8"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Ricco" hidden="false" id="34ba-cafd-1d64-1a37" collective="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e684-7822-600b-5e1e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e5a-0bfa-c175-68ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink name="Characters" hidden="false" id="5391-a626-99cd-4779" targetId="48f1-4778-a9db-cde7" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="69"/>
+              </costs>
+              <profiles>
+                <profile name="Ricco" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="1ce3-712f-6b81-2a48">
+                  <characteristics>
+                    <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                    <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                    <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+                    <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                    <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                    <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+                    <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
+                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                    <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Pikemen" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="0a11-715b-04fa-1b70">
+          <characteristics>
+            <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+            <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+            <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">3</characteristic>
+            <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">3</characteristic>
+            <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
+            <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
+            <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
+            <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+            <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="107e-7550-b306-575c"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="a2b9-8596-ad67-021d" hidden="false" type="rule" targetId="d3f1-1df6-89e3-70aa"/>
+        <infoLink name="Pike" id="2406-c0b8-3777-4c96" hidden="false" type="profile" targetId="6b20-05a5-39de-7228"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry id="6282-fa4a-84a0-ea16" name="Witch Hunters" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="8bf7-612f-1bb9-0e80" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Johann van Hal" hidden="false" id="e119-c332-2e7f-cae4">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="49a5-2253-ffb5-a9d1-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="49a5-2253-ffb5-a9d1-max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Johann van Hal" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="b022-3f00-c690-b0cc">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">5</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">5</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Witch Hunter Weapons" id="b589-9520-e8c3-5847" hidden="false">
+              <description>Johann is armed with pistols loaded with silver bullets and a sword blessed by Wilhelm.  Thus all his attacks count as magical (negating Daemonic saves and making him capable of wounding ethereal creatures).</description>
+            </rule>
+          </rules>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Stake of Sigmar" hidden="false" id="97d4-8860-43ee-19b3" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="30"/>
+              </costs>
+              <rules>
+                <rule name="Stake of Sigmar" id="5b8c-bdab-cfa4-cedc" hidden="false">
+                  <description>Enchanted Item
+The Stake of Sigmar fills Johann with the strength and purpose of Sigmar himself.  It doubles Johann&apos;s Strength when he is fighting against any Undead creatures or any Daemons.  This gives him an effective Strength of 8.  Johann may also use the stake against Vampires in hand-to-hand combat.  If he does this, a single unsaved wound caused by him automatically slay any Vampire outright.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ea9-67b5-5621-5674"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Wilhelm Hasburg" hidden="false" id="1c58-493a-c280-e56a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1833-123a-ee0b-0616-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1833-123a-ee0b-0616-max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Wilhelm Hasburg" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="8fb6-4a08-9caa-cedd">
+              <characteristics>
+                <characteristic name="Movement" typeId="da3c-fb2b-4c5f-a22b">4</characteristic>
+                <characteristic name="Weapon Skill" typeId="d46f-1ae5-387f-4ac3">4</characteristic>
+                <characteristic name="Ballistic Skill" typeId="22c7-799b-e07c-f32c">4</characteristic>
+                <characteristic name="Strength" typeId="0c58-1252-962d-8fcc">4</characteristic>
+                <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
+                <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
+                <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Wilhelm Hasburg" id="6cf5-222b-5ded-b705" hidden="false">
+              <description>Wilhelm is a fanatical priest of Sigmar, obsessed with the destruction of the forces of Undead and Chaos.  When he reads the litanies of banishment from his holy book called the &apos;the Hammer of Witches&apos;, he radiates an aura of holiness and utter faith.  Any Chaos, Dark Magic or Necromantic spell targeted towards him or Johann is dispelled on a D6 roll of 4+.</description>
+            </rule>
+          </rules>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Holy Staff" hidden="false" id="e25d-0aa5-46d1-af57" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="50"/>
+              </costs>
+              <rules>
+                <rule name="Holy Staff" id="4d6d-193c-946f-c8b1" hidden="false">
+                  <description>Magic Weapon
+Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In addition the staff will automatically wound any Skaven, Daemon or Undead Creature.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ecf-4a2d-e1f6-d517"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="eaa7-6800-e651-8bea" value="150"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6bf4-a9f0-aa97-5166"/>
+      </constraints>
+      <rules>
+        <rule name="Formation" id="048d-97ad-bd80-7585" hidden="false">
+          <description>Johann and Wilhelm always fight together and cannot join any other units.</description>
+        </rule>
+        <rule name="Psychology" id="ae43-c908-88bb-3a4b" hidden="false">
+          <description>Johann and Wilhelm are utterly dedicated to their work of hunting down Chaos worshippers and Vampires.  During the long lonely years they have met and defeated the most horrifying creatures and blasphemous monsters.  Because of their experiences Johann and Wilhelm are immune to psychology.  The only exception is that they hate all models in any Chaos army and all Undead creatures.</description>
         </rule>
       </rules>
     </selectionEntry>
