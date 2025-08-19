@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="22" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<gameSystem id="417a-57eb-6f3e-81c9" name="Warhammer Fantasy 4th ed" revision="23" battleScribeVersion="2.03" authorName="Paul Street" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" authorContact="strepj+warhammer4e@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <publications>
-    <publication id="d9e7-add3-773e-ffab" name="Rulebook"/>
-    <publication name="GitHub" id="1253-06b7-5bbd-276d" hidden="false" publisher="GitHub" publisherUrl="https://github.com/Paheej/whfb4th"/>
+    <publication id="d9e7-add3-773e-ffab" name="Rulebook 4e" publisherUrl="https://4th.whfb.app" shortName="Rulebook 4e" publicationDate="1992" publisher="Warhammer Rulebook (4th Edition)"/>
+    <publication name="Herohammer Repo" id="1253-06b7-5bbd-276d" hidden="false" publisher="Warhammer Fantasy 4e/5e Repo" publisherUrl="https://github.com/Paheej/whfb4th" publicationDate="2025" shortName="Herohammer Repo"/>
+    <publication id="68bf-4e29-6b5b-d1ce" name="Rulebook 5e" publisherUrl="https://5th.whfb.app" shortName="Rulebook 5e" publicationDate="1996" publisher="Warhammer Rulebook (5th Edition)"/>
   </publications>
   <costTypes>
     <costType id="eaa7-6800-e651-8bea" name="pts" defaultCostLimit="-1"/>
@@ -19,6 +20,7 @@
         <characteristicType id="b418-0e30-644f-1435" name="Initiative"/>
         <characteristicType id="fa03-f9a3-8117-98dd" name="Attacks"/>
         <characteristicType id="bbad-d421-400b-87c1" name="Leadership"/>
+        <characteristicType id="c3d2-d217-9af4-f7ff" name="Save"/>
       </characteristicTypes>
     </profileType>
     <profileType id="6ca9-f2ff-2648-2744" name="Ranged Weapon">
@@ -54,7 +56,7 @@
     <categoryEntry name="Commoners" id="f757-c1cf-97a5-5eaa" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry name="Standard Army Composition" id="81f2-ac67-2103-6806" hidden="false">
+    <forceEntry name="Army Composition" id="81f2-ac67-2103-6806" hidden="false">
       <categoryLinks>
         <categoryLink name="Regiments" hidden="false" id="0f05-1dcc-e0ad-8d5d" targetId="62d3-efc6-6c2c-634e" primary="false">
           <constraints>
@@ -141,7 +143,7 @@
             <constraint type="max" value="50" field="eaa7-6800-e651-8bea" scope="parent" shared="true" id="7df8-c39d-5fc9-d2e5" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Knights" hidden="false" id="c621-eb29-d1d1-b78b" targetId="ca4b-58d9-4d1b-8340" primary="false" type="category">
+        <categoryLink name="Knights" hidden="false" id="c621-eb29-d1d1-b78b" targetId="ca4b-58d9-4d1b-8340" primary="false">
           <constraints>
             <constraint type="min" value="0" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="babf-ebcb-cf0c-a8d6" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
@@ -153,7 +155,7 @@
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="Commoners" hidden="false" id="68ee-4f5c-d448-68cc" targetId="f757-c1cf-97a5-5eaa" primary="false" type="category">
+        <categoryLink name="Commoners" hidden="false" id="68ee-4f5c-d448-68cc" targetId="f757-c1cf-97a5-5eaa" primary="false">
           <constraints>
             <constraint type="max" value="0" field="limit::eaa7-6800-e651-8bea" scope="roster" shared="true" id="69f0-b263-3cb0-d6bb" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
           </constraints>
@@ -3927,7 +3929,13 @@ This attack is in addition to the character&apos;s normal attacks, and is made b
   <sharedRules>
     <rule id="ad62-f73e-08d3-3236" name="Infantry" hidden="false"/>
     <rule id="ad49-ba01-620f-54f5" name="Fly" publicationId="d9e7-add3-773e-ffab" hidden="false">
-      <description>May move up to 24&quot; in any direction, ignoring terrain and models while moving. Must land at the end of the movement. May charge, but only up to 24&quot; and still obaying all the rules for charging.</description>
+      <description>Models that can fly are moved during the movement phase exactly like other models except they have the option of taking to the air and flying rather than just walking or running. A flying model may take off, fly as far as it is able, and land again all in the same movement phase. Models do not normally end their movement in the air, they simply use their ability to fly to move further and to pass over obstacles or troops that may be in the way. It is possible to remain airborne however, and this is explained later.
+
+
+Generally speaking, models that can fly can travel up to 24&quot; through the air during their movement phase. If a model flies more slowly or more quickly this is noted in the Battle Bestiary. The model must move wholly in the air or wholly on land, it cannot mix the two in the same turn. A model may use this move to get itself into hand-to-hand combat if the player wishes, effectively charging its opponent from the air. Note that a flying charge is still only 24&quot;. The distance is not doubled as it is for a charge over land.
+
+
+Flying models are moved without penalty for changing direction or any other reason. The model is simply moved as the player wishes up to the maximum distance allowed.</description>
     </rule>
     <rule id="6c74-d495-c302-2b9c" name="Shield" hidden="false">
       <description>+1 Armour Save</description>
@@ -3941,7 +3949,7 @@ This attack is in addition to the character&apos;s normal attacks, and is made b
     </rule>
     <rule id="3069-471f-5e53-7c54" name="Barding" hidden="false">
       <description>+1 Mounted Armour Save
--1 Movment</description>
+-1 Movement</description>
     </rule>
     <rule id="4ca9-6f52-433a-9848" name="Skirmish" hidden="false" publicationId="d9e7-add3-773e-ffab" page="90">
       <description>Models in unit may be positioned up to 2&quot; apart.
@@ -3950,10 +3958,40 @@ Enemy units suffer -1 to hit penalty when shooting at skirmishers.
 Must always test on own leadership value (even accompanied by a character) and do not benefit from general&apos;s leadership nor battle standard re-rolls.</description>
     </rule>
     <rule id="11ed-1d0e-39c2-74da" name="Fear" hidden="false">
-      <description>This model causes Fear as described in the Psychology section of the Warhammer rulebook</description>
+      <description>This model causes Fear.
+
+
+Enemy units must take a Fear test in the following situations:
+
+
+1. If Charged by a Feared Enemy
+If a unit is charged by an enemy that it fears then it must take make a test to overcome its fear. Test when the charge is declared and determined to be within its charge range. If the test is passed the unit can fight as normal. If the unit fails its test, and if is outnumbered by the charging enemy, it will flee. If the unit fails its test but is not outnumbered by the charging enemy it will fight as normal, but must roll 6&apos;s to score hits in the first turn of combat.
+
+
+2. If a Unit Wishes to Charge a Feared Enemy
+If a unit wishes to charge an enemy that it fears then it must take a test to overcome its fear. If the test is failed the unit may not charge and must remain stationary for the turn.
+
+
+Defeated by a Feared Enemy
+A unit defeated in hand-to-hand combat is automatically broken without a Break test if it is fighting an enemy that it fears and which outnumbers it. If the fear- causing enemy does not outnumber the unit then a Break test is taken as normal. See the Close Combat section for details of combat results, Break tests and fleeing troops.</description>
     </rule>
-    <rule id="58dd-1f3f-be5f-5dd1" name="Terror" hidden="false">
-      <description>This model causes Terror as described in the Psychology section of the Warhammer rulebook</description>
+    <rule id="58dd-1f3f-be5f-5dd1" name="Terror" hidden="false" publicationId="68bf-4e29-6b5b-d1ce" page="49">
+      <description>Once per game enemy units must take a terror check when they meet either of the following conditions:
+
+
+1. A unit must test to overcome its terror if charged by or wishing to charge an enemy that causes terror.
+
+
+A unit must test for terror at the start of its turn if there is an enemy which causes terror within 8&quot;.
+
+
+A unit which fails its Terror test will flee away from the source of its terror in the same way as if it had failed its Break test in hand-to-hand combat or decided to flee from a charge. A unit being charged will flee immediately like any unit which flees from a charge. A unit attempting to charge or failing a test at the start of its turn will flee in its movement phase.
+
+
+A unit which flees in terror from an enemy within 8&quot; at the start of its turn may not attempt to rally that turn. It will flee in the compulsory part of its movement phase, in the same way as a unit which panics because of fleeing friends within 4&quot; (see Panic).
+
+
+Remember that only a single test is ever made for terror by any unit during the whole game, whether it is made because of a charge or because the unit finds itself within 8&quot; of a terrifying monster.</description>
     </rule>
     <rule id="59e5-6c23-02bb-82f3" name="Breathe Fire" hidden="false">
       <description>This model can Breath Fire in the shooting phase. Use the teardrop-shaped flame template to work out hits. Any model under the template it hit on a D6 score of a 4 or more. Fire hits have a strength of 4.</description>
@@ -3961,26 +3999,26 @@ Must always test on own leadership value (even accompanied by a character) and d
     <rule id="f760-982d-bd1b-6f4a" name="Petrify" hidden="false">
       <description>This model gaze can Petrify its opponents, turning them into stone and slaying them. The model may use its magical gaze in the magic phase. This potent spell has a range of 8&quot; and can be used against one model that the model can see. The target can try to avoid beeing turned to stone by looking aside quickly. If a model can roll less than its Initiative value on a D6 then it looks away in time ans id unaffected, otherwise it is turned to stone. On a roll of a 6 the target is always affected, even if its Initiative is 6 or more.</description>
     </rule>
-    <rule id="a14d-2a2f-e53b-f3d9" name="Chitinous Armour" hidden="false">
-      <description>This model has a armour save of 4+</description>
+    <rule id="a14d-2a2f-e53b-f3d9" name="Chitinous Armour" hidden="false" publicationId="68bf-4e29-6b5b-d1ce" page="128">
+      <description>The model is protected by thick horny plates of chitin. These act just like layers of armour and give the model an armour saving throw of 4+ on a D6.</description>
     </rule>
     <rule id="3c13-eb2e-d86c-b416" name="Pincer attack" hidden="false">
       <description>The Giant Scorpion attacks with its 2 pincers. If both pincers hit, then thay have grabbed hold of their target and the Gigant Scorpion brings its tail down to sting its victims. Where both attacks hit, both hits are therefore resolved at double normal Strength, ie 10 instead of 5. If only one hit is scored this is resolved at the normal Strength of 5.</description>
     </rule>
-    <rule id="f90d-be89-cfb8-33d8" name="Spider Move" hidden="false">
+    <rule id="f90d-be89-cfb8-33d8" name="Spider Move" hidden="false" publicationId="68bf-4e29-6b5b-d1ce" page="129">
       <description>Spiders have eight hairy legs which enable them to move easily over obstacles and rough terrain. Spiders are not slowed down by crossing difficult ground or obstacles.</description>
     </rule>
-    <rule id="1110-d8ef-feb1-7b22" name="Scaly Skin" hidden="false">
-      <description>This model has a armour save of 5+.</description>
+    <rule id="1110-d8ef-feb1-7b22" name="Scaly Skin" hidden="false" publicationId="68bf-4e29-6b5b-d1ce" page="139">
+      <description>This model has exceptionally scaly skin which acts like armour, giving it an armour saving throw of 5 or more on a D6.</description>
     </rule>
-    <rule id="6067-9977-7aa5-7951" name="Insects or Spiders" hidden="false">
-      <description>No armour saving throw is allowed if you are fighting instects or spiders</description>
+    <rule id="6067-9977-7aa5-7951" name="Swarms - Insects or Spiders" hidden="false">
+      <description>Insects or Spiders are so small that they can crawl into armour and bite or sting their target. No armour saving throw is allowed if you are fighting insects or spiders.</description>
     </rule>
-    <rule id="b9b7-c1eb-bae0-e082" name="Frogs" hidden="false">
-      <description>Can cross water, marshes, bogs or other wet ground without penalty</description>
+    <rule id="b9b7-c1eb-bae0-e082" name="Swarms - Frogs" hidden="false" publicationId="68bf-4e29-6b5b-d1ce" page="136">
+      <description>Frogs can cross water, marshes, bogs or other wet ground without penalty.</description>
     </rule>
-    <rule id="17c7-b850-da89-23c1" name="Bats" hidden="false">
-      <description>May Fly up to 8&quot; during their turn.</description>
+    <rule id="17c7-b850-da89-23c1" name="Swarms - Bats" hidden="false">
+      <description>Bats can fly, but because they are so small they may only fly up to 8&quot; during their turn. Although they do not fly particularly fast, they can move over terrain which would slow down creatures moving over land, and they can move directly over a body of troops.</description>
     </rule>
     <rule id="0e3b-1fa1-29cd-0960" name="Unbreakable" hidden="false">
       <description>This model is immune to all psychology effects and never take break tests if defeated in hand-to-hand combat. This model will always pass any leadership based test it is required to make.</description>
@@ -4006,21 +4044,73 @@ Each model hit suffers a wound with no armour saves allowed on a roll of 6 on 1D
     <rule id="4cc9-7c45-649b-d15c" name="Immune to Psychology" hidden="false">
       <description>This unit is not affected by Panic, Fear, Terror or any of the psychology rules</description>
     </rule>
-    <rule id="6fe7-4dc8-4ac0-e088" name="Stupidity" hidden="false">
-      <description>This unit is subject to Stupidity as described in the Warhammer Rulebook</description>
+    <rule id="6fe7-4dc8-4ac0-e088" name="Stupidity" hidden="false" publicationId="68bf-4e29-6b5b-d1ce" page="50">
+      <description>Stupid creatures must make a test at the start of their turn to see whether they overcome their stupidity. Make a test for each unit of stupid troops. If you pass the test by rolling their Leadership value or less on 2D6 then all is well and good - the creatures behave reasonably intelligently and the player may move and fight with them as normal. Nothing untoward has occurred beyond a bit of drooling and the odd spontaneous cackle.
+
+
+If the test is failed then all is not well. The following rules apply until the creatures&apos; following turn when they must test once more to see whether they are overcome by stupidity.
+
+
+If already in hand-to-hand combat half of the stupid creatures suddenly stop fighting. They stare around blankly and wonder where they are. If the unit has an odd number of models or if a stupid creature is fighting on its own then roll a D6. If the result is 4 or more the odd model fights; if not it stands around vacantly. Note that only stupid creatures are affected. If a unit contains stupid creatures and other creatures (a unit of Trolls led by a Goblin chieftain, for example) then the other creatures are not affected.
+
+
+If not in hand-to-hand combat the unit momentarily forgets what it is doing. Roll a D6 to determine how the unit moves this turn. This is compulsory movement and so occurs before other movement but after charges have been declared (see the Movement section). Any non-stupid creatures with the unit must also move as described - they are carried along by the movement of the rest of the unit and risk being trampled and squashed if they attempt to do otherwise.
+
+
+D6
+
+
+Result
+
+
+1-3
+
+
+Move the unit directly forwards at half normal speed. Any enemy troops encountered are automatically charged. If there are friends in the way both units blunder into each other and their ranks become confused, in which case both units are pinned in place for the rest of the turn and neither may move further.
+
+
+4-6
+
+
+The unit stands around in a confused and ineffective manner. It will do nothing for the remainder of the turn while the stupid creatures stare about them, squabble, or lie down for a bit of a rest.</description>
     </rule>
-    <rule id="ffa4-0100-e838-784a" name="Frenzy" hidden="false">
-      <description>This unit is subject to Frenzy as described in the Warhammer Rulebook</description>
+    <rule id="ffa4-0100-e838-784a" name="Frenzy" hidden="false" page="41" publicationId="d9e7-add3-773e-ffab">
+      <description>Frenzied troops will automatically go into a furious berserk state if there are enemy within charge reach at the start of their turn, and will remain frenzied until they are broken in hand-to-hand combat, or until there are no enemy within charge reach. If you wish you can try and restrain troops by making a restraining test to bring them under control at the start of your turn, but you don&apos;t have to do this unless you want to. If you want to restrain frenzied troops roll 2D6 against their leadership just like any other psychology test. If you roll equal to or less than the unit&apos;s leadership you are successful and the unit is not frenzied for that turn and not affected by the following rules.
+
+
+Frenzied troops must charge the enemy if they are within charge distance.
+
+
+Frenzied troops fight with double their normal number of attacks in hand-to-hand combat. Troops with 1 attack therefore have 2, troops with 2 attacks double up to 4 and so on.
+
+
+Frenzied troops always pursue fleeing enemy whether the player wants to or not. Unlike other troops they may not attempt to hold back as they are far too crazed with blood lust.
+
+
+While frenzied, troops are not affected by other psychology. They are immune to panic, fear, terror etc, and do not have to make these tests.
+
+
+If frenzied troops are broken in hand-to-hand combat their frenzy is automatically ended. They flee exactly like other troops. Should they subsequently rally they may continue to fight but are not affected by frenzy for the remainder of the battle. Their exuberant, crazed frenzy has been beaten out of them and they continue to fight just like other troops.</description>
     </rule>
     <rule id="84b0-9d5c-5998-920d" name="Regeneration" hidden="false">
       <description>This model regenerates wounds on a 4+. After blows has been struck, roll for each wound lost, even from models that has been killed, one wound is restored for each roll of 4+ and casualties can be returned if enough wounds are regenerated.</description>
     </rule>
-    <rule name="Standard" id="f881-50eb-7f12-abb8" hidden="false" publicationId="d9e7-add3-773e-ffab" page="82">
-      <description>+1 to unit&apos;s combat score</description>
+    <rule name="Standard" id="f881-50eb-7f12-abb8" hidden="false" publicationId="68bf-4e29-6b5b-d1ce" page="87">
+      <description>If a unit includes a standard bearer then it will be more determined than ever to fight hard and beat the foe. A unit which has a standard bearer may therefore add +1 to its combat result when deciding which side has won hand-to-hand combat. </description>
     </rule>
-    <rule name="Musician" id="86d8-c01b-ac40-f462" hidden="false" publicationId="d9e7-add3-773e-ffab" page="4e: 82 5e: 87">
-      <description>4th Edition: Allows a unit to attempt a reform.
+    <rule name="Musician" id="86d8-c01b-ac40-f462" hidden="false" publicationId="d9e7-add3-773e-ffab" page="82">
+      <description>
+
+4th Edition: Allows a unit to attempt a reform.
+
+
 5th Edition: If a hand-to-hand combat is drawn then each side rolls a D6 for each musician model fighting in the combat. The side which rolls the highest individual score wins the combat by 1 point. If the highest scores are equal then neither side wins and the combat is drawn. If one side has a musician and the other doesn&apos;t, then the side with the musician automatically wins by 1 point.</description>
+    </rule>
+    <rule name="Scaly Skin (Dragon)" id="27e5-f0dc-58b3-d9b2" hidden="false" publicationId="68bf-4e29-6b5b-d1ce" page="125">
+      <description>Dragons have extremely hard scales which act like armour, protecting them from attack. A Dragon therefore has an armour saving throw of 4 or more on a D6. However, because dragonscale is so extraordinarily hard, the Dragon&apos;s save is not modified by the usual saving throw modifier for Strength. Regardless of the Strength of the attack, a Dragon will always have the same save. Only if the attack discounts saves altogether is the save ignored.</description>
+    </rule>
+    <rule name="Scaly Skin (Hydra)" id="7abb-e309-0c3e-1a60" hidden="false" publicationId="68bf-4e29-6b5b-d1ce" page="133">
+      <description>Hydras have an exceptionally tough scaly skin. This acts like armour and gives the Hydra an armour saving throw of 5 or 6 on a D6. As with Dragons, this is not modified by the Strength of the attack, so Hydras will always have the same save. Only if the attack discounts saves altogether is the save ignored.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

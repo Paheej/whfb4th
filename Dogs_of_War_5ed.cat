@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="21" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
+<catalogue id="c6b9-0ffe-ea97-9214" name="Dogs of War 5ed" revision="22" battleScribeVersion="2.03" authorName="Paul Street" library="false" gameSystemId="417a-57eb-6f3e-81c9" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue" authorContact="strepj+warhammerfantasy@gmail.com" authorUrl="www.carolinafirstandonly.com">
   <selectionEntries>
     <selectionEntry id="99df-285e-40ad-9e07" name="Mercenary General" hidden="false" collective="false" import="true" type="unit">
       <constraints>
@@ -7,7 +7,15 @@
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="30e7-942e-791b-82dd" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="e2a4-e25b-cf38-596f" name="Mercenary General" hidden="false" targetId="0374-1812-640a-1786" type="profile"/>
+        <infoLink id="e2a4-e25b-cf38-596f" name="Mercenary General" hidden="false" targetId="0374-1812-640a-1786" type="profile">
+          <modifiers>
+            <modifier type="increment" value="2" field="c3d2-d217-9af4-f7ff">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="99df-285e-40ad-9e07" childId="b347-c275-2147-5e36" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="0e65-e9c4-09ff-a4ee" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
@@ -33,13 +41,32 @@
         <selectionEntryGroup id="eef4-bdfa-13b3-5468" name="Weapons/Armour" hidden="false" collective="false" import="true">
           <entryLinks>
             <entryLink id="7650-cbdf-51d6-06d2" name="Missle Weapons" hidden="false" collective="false" import="true" targetId="a0ca-52e8-ffdf-045e" type="selectionEntryGroup"/>
-            <entryLink id="2d94-847b-e378-a795" name="Armour" hidden="false" collective="false" import="true" targetId="920d-1afa-af43-93d6" type="selectionEntryGroup">
-              <infoLinks>
-                <infoLink name="Heavy Armour" id="6b41-4fd6-d672-2109" hidden="false" type="rule" targetId="d3f1-1df6-89e3-70aa"/>
-              </infoLinks>
-            </entryLink>
             <entryLink id="7d9c-d0af-00f4-89d6" name="Hand-to-Hand Weapons" hidden="false" collective="false" import="true" targetId="1f39-4a20-8012-f915" type="selectionEntryGroup"/>
           </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Armour" id="a2d2-99b1-6eab-e094" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Heavy Armour" hidden="false" id="d37a-4b5c-61b6-3720" defaultAmount="1">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5fa9-43c0-56bc-d74a-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5fa9-43c0-56bc-d74a-max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Heavy Armour" id="3015-6bc6-3faf-c94d" hidden="false" type="rule" targetId="d3f1-1df6-89e3-70aa"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="9487-d500-aed9-7666">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3058-00f0-ff87-273a-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3058-00f0-ff87-273a-max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Shield" id="ac84-3b0a-ed99-3105" hidden="false" type="rule" targetId="6c74-d495-c302-2b9c"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -50,7 +77,21 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bfa-441d-251d-f6b2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Warhorse" id="4a80-1aa1-df92-883c" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile"/>
+                <infoLink name="Warhorse" id="4a80-1aa1-df92-883c" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile">
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="99df-285e-40ad-9e07" childId="f418-bc12-7d8c-3b3e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="99df-285e-40ad-9e07" childId="3513-89c6-e77a-bf7e" shared="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="99df-285e-40ad-9e07" childId="b347-c275-2147-5e36" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
                 <infoLink name="Barding" id="48b5-111c-5ce9-1ef2" hidden="false" type="rule" targetId="3069-471f-5e53-7c54"/>
               </infoLinks>
               <costs>
@@ -65,50 +106,48 @@
       </costs>
       <modifiers>
         <modifier type="set" value="0" field="a7ba-92fb-142b-23fb">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="a7ba-92fb-142b-23fb">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="a7ba-92fb-142b-23fb">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="26e7-9e00-390d-6e0a" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="26e7-9e00-390d-6e0a" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="602d-5d55-8d4e-cf08" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" value="0" field="30e7-942e-791b-82dd">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="30e7-942e-791b-82dd">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="30e7-942e-791b-82dd">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="26e7-9e00-390d-6e0a" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="a7ba-92fb-142b-23fb">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="602d-5d55-8d4e-cf08" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="30e7-942e-791b-82dd">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="602d-5d55-8d4e-cf08" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="602d-5d55-8d4e-cf08" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5e9d-3f57-fe3d-db71" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="e147-bf36-59d9-6092" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="26e7-9e00-390d-6e0a" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="510b-eef8-e95d-7428" name="Voland&apos;s Venators" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="9d92-f23c-feeb-0e73" name="Warhorse" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile"/>
+        <infoLink id="9d92-f23c-feeb-0e73" name="Warhorse" hidden="false" targetId="c2a3-1622-dcb6-00f5" type="profile">
+          <modifiers>
+            <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="510b-eef8-e95d-7428" childId="f418-bc12-7d8c-3b3e" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="510b-eef8-e95d-7428" childId="3513-89c6-e77a-bf7e" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="510b-eef8-e95d-7428" childId="2e3d-8c19-43fc-9c94" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8255-0e5e-4534-5240" name="Regiments" hidden="false" targetId="62d3-efc6-6c2c-634e" primary="true"/>
@@ -122,18 +161,6 @@
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ad29-f707-4f1f-e210" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e50-d32a-7494-8236" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9d2-003d-785f-2599" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="9277-ae5d-90d3-36a8" name="Sword" hidden="false" targetId="6e77-240c-7324-eef7" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry id="2e3d-8c19-43fc-9c94" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1077-7567-773c-8919" type="max"/>
@@ -141,42 +168,6 @@
           </constraints>
           <infoLinks>
             <infoLink id="5410-1d6b-423b-bee1" name="Barding" hidden="false" targetId="3069-471f-5e53-7c54" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="94e2-21c6-5234-d16d" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd83-f270-dd64-eccc" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d03-907f-ad43-a27c" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="9345-fd52-41f0-0c53" name="Heavy Armour" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b315-0b23-5cb3-2b7b" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a22f-2573-ff78-fabd-min" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a22f-2573-ff78-fabd-max" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="f3c0-6788-961a-ad30" name="Lance" hidden="false" targetId="9dc5-6237-6584-c240" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="baca-af00-5bfd-3292" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d6d-99aa-dcf9-fe4f-min" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3d6d-99aa-dcf9-fe4f-max" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="61f1-fb21-77aa-2626" name="Shield" hidden="false" targetId="6c74-d495-c302-2b9c" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
@@ -236,6 +227,58 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Weapons/Armour" id="5842-6333-4863-e6f8" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Heavy Armour" hidden="false" id="3513-89c6-e77a-bf7e" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b25-035d-1745-ef63" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ff57-a3fd-ffeb-6e41" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Heavy Armour" id="735d-41f1-f2d7-3c6a" hidden="false" targetId="d3f1-1df6-89e3-70aa" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Lance" hidden="false" id="a363-5410-e74d-fe64" collective="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a22f-2573-ff78-fabd-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a22f-2573-ff78-fabd-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Lance" id="01cd-13cd-a5f9-732a" hidden="false" targetId="9dc5-6237-6584-c240" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="f418-bc12-7d8c-3b3e" collective="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d6d-99aa-dcf9-fe4f-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d6d-99aa-dcf9-fe4f-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Shield" id="cc42-71cc-b245-0ef5" hidden="false" targetId="6c74-d495-c302-2b9c" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sword" hidden="false" id="7fd6-747c-3ae4-3e49" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3f2f-7bd6-82aa-dd14" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b7cd-392d-1683-4e4c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Sword" id="9205-145c-6f51-3767" hidden="false" targetId="6e77-240c-7324-eef7" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
@@ -252,6 +295,7 @@
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">2+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -458,7 +502,15 @@
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="a7e0-70ae-f707-3a78" childId="9045-314e-ed12-765f" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </profile>
               </profiles>
             </selectionEntry>
@@ -500,7 +552,15 @@
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="a7e0-70ae-f707-3a78" childId="9045-314e-ed12-765f" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <constraints>
@@ -619,7 +679,30 @@
     </selectionEntry>
     <selectionEntry id="96c7-541f-4f0d-66f6" name="Mercenary Hero" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
-        <infoLink id="91fe-d3de-da61-d8d7" name="Mercenary Hero" hidden="false" targetId="e2fc-96fd-d149-ab43" type="profile"/>
+        <infoLink id="91fe-d3de-da61-d8d7" name="Mercenary Hero" hidden="false" targetId="e2fc-96fd-d149-ab43" type="profile">
+          <modifiers>
+            <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="6f9f-6264-0b9b-1a38" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="c987-d2bf-3496-85dd" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="2" field="c3d2-d217-9af4-f7ff">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="8a86-7d08-4ad7-f12b" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="c3d2-d217-9af4-f7ff">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="3def-b584-03e9-8f64" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b323-9f27-1a5a-34dc" name="Characters" hidden="false" targetId="48f1-4778-a9db-cde7" primary="true"/>
@@ -649,7 +732,21 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3"/>
               </costs>
               <infoLinks>
-                <infoLink name="Warhorse" id="0a08-5c0c-2dbd-79fa" hidden="false" type="profile" targetId="c2a3-1622-dcb6-00f5"/>
+                <infoLink name="Warhorse" id="0a08-5c0c-2dbd-79fa" hidden="false" type="profile" targetId="c2a3-1622-dcb6-00f5">
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="f418-bc12-7d8c-3b3e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="3513-89c6-e77a-bf7e" shared="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="2e3d-8c19-43fc-9c94" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4787-8a6c-69bf-48ff"/>
@@ -707,6 +804,13 @@
                   <infoLinks>
                     <infoLink name="Halberds" id="d82b-e3ef-ea25-e180" hidden="false" type="profile" targetId="67bc-c025-7aee-b102"/>
                   </infoLinks>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="3def-b584-03e9-8f64" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Spear" hidden="false" id="a96c-6afb-46bc-c671">
                   <costs>
@@ -804,7 +908,30 @@
           <selectionEntries>
             <selectionEntry id="a228-ab5b-1e61-ef9d" name="Level 1 - Wizard" hidden="false" collective="false" import="true" type="model" defaultAmount="1">
               <infoLinks>
-                <infoLink id="f494-7f86-4991-b575" name="Wizard" hidden="false" targetId="8a7a-5dc3-7049-7ca7" type="profile"/>
+                <infoLink id="f494-7f86-4991-b575" name="Wizard" hidden="false" targetId="8a7a-5dc3-7049-7ca7" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="5+" field="c3d2-d217-9af4-f7ff">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="6+" field="c3d2-d217-9af4-f7ff">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="bf93-a807-b0e4-0d4b" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
@@ -832,7 +959,30 @@
             </selectionEntry>
             <selectionEntry id="fa6e-4a74-b1e0-fd87" name="Level 2 - Wizard Champion" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="da7c-bc31-048f-3ca4" name="Wizard Champion" hidden="false" targetId="ace1-ca52-8432-149b" type="profile"/>
+                <infoLink id="da7c-bc31-048f-3ca4" name="Wizard Champion" hidden="false" targetId="ace1-ca52-8432-149b" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="5+" field="c3d2-d217-9af4-f7ff">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="6+" field="c3d2-d217-9af4-f7ff">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="9934-36bf-f442-2017" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
@@ -860,7 +1010,30 @@
             </selectionEntry>
             <selectionEntry id="9bbf-75e4-27ab-69dd" name="Level 3 - Master Wizard" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="428e-e5d2-4999-4ef5" name="Master Wizard" hidden="false" targetId="7ca3-e761-5952-1d45" type="profile"/>
+                <infoLink id="428e-e5d2-4999-4ef5" name="Master Wizard" hidden="false" targetId="7ca3-e761-5952-1d45" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="5+" field="c3d2-d217-9af4-f7ff">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="6+" field="c3d2-d217-9af4-f7ff">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="302c-f9d2-258e-a6ce" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
@@ -888,7 +1061,30 @@
             </selectionEntry>
             <selectionEntry id="a4c0-aa99-9d14-3195" name="Level 4 - Wizard Lord" hidden="false" collective="false" import="true" type="model">
               <infoLinks>
-                <infoLink id="788b-ac67-36d9-d235" name="Wizard Lord" hidden="false" targetId="ab43-034a-5454-68e5" type="profile"/>
+                <infoLink id="788b-ac67-36d9-d235" name="Wizard Lord" hidden="false" targetId="ab43-034a-5454-68e5" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="5+" field="c3d2-d217-9af4-f7ff">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="6+" field="c3d2-d217-9af4-f7ff">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="6bff-ef91-50b7-b8b9" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
@@ -923,7 +1119,15 @@
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="3"/>
               </costs>
               <infoLinks>
-                <infoLink name="Warhorse" id="9104-b456-4b17-2446" hidden="false" type="profile" targetId="c2a3-1622-dcb6-00f5"/>
+                <infoLink name="Warhorse" id="9104-b456-4b17-2446" hidden="false" type="profile" targetId="c2a3-1622-dcb6-00f5">
+                  <modifiers>
+                    <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f4c-b857-fcfd-9e12"/>
@@ -1010,6 +1214,7 @@
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                 <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">5</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1034,6 +1239,7 @@
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
                 <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1276,6 +1482,7 @@ May not deploy within 3&quot; of another unit at the start of the battle.</descr
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1316,6 +1523,7 @@ All wounds personally scored by Al Muktar count double.  Example: If Al Muktar 
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1340,6 +1548,7 @@ All wounds personally scored by Al Muktar count double.  Example: If Al Muktar 
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1379,6 +1588,7 @@ All wounds personally scored by Al Muktar count double.  Example: If Al Muktar 
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
           </characteristics>
         </profile>
         <profile name="Horse" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="9d68-eb46-de1a-759f">
@@ -1482,6 +1692,7 @@ Enemy models in base contact have their weapon skill reduced to 1.</description>
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">9</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">3+</characteristic>
           </characteristics>
         </profile>
         <profile name="Deathfang" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="73d7-eeea-303e-b6c0">
@@ -1495,6 +1706,7 @@ Enemy models in base contact have their weapon skill reduced to 1.</description>
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">8</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">4+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1513,7 +1725,7 @@ Enemy models in base contact have their weapon skill reduced to 1.</description>
         <infoLink name="Dragon&apos;s Breath" id="47c3-2454-e9bb-bf99" hidden="false" type="rule" targetId="50bb-5d95-21fc-6327"/>
         <infoLink name="Fly" id="060c-09ed-0988-573a" hidden="false" type="rule" targetId="ad49-ba01-620f-54f5"/>
         <infoLink name="Terror" id="28f9-b93a-22d4-698e" hidden="false" type="rule" targetId="58dd-1f3f-be5f-5dd1"/>
-        <infoLink name="Scaly Skin" id="5f87-d187-8707-c6df" hidden="false" type="rule" targetId="1110-d8ef-feb1-7b22"/>
+        <infoLink name="Scaly Skin (Dragon)" id="325f-4209-d3d2-1ae7" hidden="false" type="rule" targetId="27e5-f0dc-58b3-d9b2"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry id="ae58-a837-f4b3-8239" name="Beorg Bearstruck and the Bearmen of Urslo" hidden="false" collective="false" import="true" type="unit">
@@ -1568,6 +1780,7 @@ Enemy models in base contact have their weapon skill reduced to 1.</description>
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1594,7 +1807,7 @@ Entire unit receives +1 to hit bonus in the initial round of each hand-to-hand c
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80ee-5b3e-53cd-42c7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <categoryLinks>
-                <categoryLink name="Characters" hidden="false" id="d3f6-7668-cbc6-f130" targetId="48f1-4778-a9db-cde7" primary="false"/>
+                <categoryLink targetId="62d3-efc6-6c2c-634e" id="37a3-62f7-391f-a784" primary="false" name="Regiments"/>
               </categoryLinks>
               <costs>
                 <cost name="pts" typeId="eaa7-6800-e651-8bea" value="165"/>
@@ -1611,6 +1824,7 @@ Entire unit receives +1 to hit bonus in the initial round of each hand-to-hand c
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1633,6 +1847,28 @@ Special save of 4+ against all wounds inflicted upon bearer; save is not modifie
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Weapons/Armour" id="f9dd-3497-c835-f1c4" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Light Armour" hidden="false" id="5796-756c-7b3a-6a63">
+              <infoLinks>
+                <infoLink name="Light Armour" id="0272-c5e7-6dd2-8767" hidden="false" type="rule" targetId="eb59-f399-63e7-5c58"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="145f-1998-7a9e-b577-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="145f-1998-7a9e-b577-max"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="1a24-d59d-dfc2-034a">
+              <infoLinks>
+                <infoLink name="Shield" id="1d4d-ad15-688c-0cbc" hidden="false" type="rule" targetId="6c74-d495-c302-2b9c"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9d4a-55c7-91ed-ba4a-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9d4a-55c7-91ed-ba4a-max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="eaa7-6800-e651-8bea" value="0"/>
@@ -1649,6 +1885,7 @@ Special save of 4+ against all wounds inflicted upon bearer; save is not modifie
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1656,8 +1893,6 @@ Special save of 4+ against all wounds inflicted upon bearer; save is not modifie
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4341-41d0-ac4a-8549"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Shield" id="1d4d-ad15-688c-0cbc" hidden="false" type="rule" targetId="6c74-d495-c302-2b9c"/>
-        <infoLink name="Light Armour" id="0272-c5e7-6dd2-8767" hidden="false" type="rule" targetId="eb59-f399-63e7-5c58"/>
         <infoLink name="Hand Weapon" id="b36d-c869-c6ac-edc2" hidden="false" type="profile" targetId="2017-abc6-dba2-7bc2"/>
       </infoLinks>
     </selectionEntry>
@@ -1825,8 +2060,9 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
                 <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
-                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1(+1)</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">*</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1856,8 +2092,9 @@ The horse and limber are removed when the gun is destroyed.</description>
                     <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">4</characteristic>
                     <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
-                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
+                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3(+1)</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">*</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1950,6 +2187,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1972,6 +2210,7 @@ The horse and limber are removed when the gun is destroyed.</description>
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2047,6 +2286,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2069,6 +2309,7 @@ The horse and limber are removed when the gun is destroyed.</description>
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2200,8 +2441,9 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
                 <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">1</characteristic>
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
-                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
+                <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1(+1)</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff"/>
               </characteristics>
             </profile>
           </profiles>
@@ -2231,8 +2473,9 @@ The horse and limber are removed when the gun is destroyed.</description>
                     <characteristic name="Toughness" typeId="16d7-9f22-06d8-8427">3</characteristic>
                     <characteristic name="Wounds" typeId="f9d0-a5b0-7e0b-a404">2</characteristic>
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
-                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
+                    <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2(+1)</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2251,6 +2494,7 @@ The horse and limber are removed when the gun is destroyed.</description>
         <infoLink name="Crossbow" id="fb24-d67f-e822-36bb" hidden="false" type="profile" targetId="4fce-d0c8-b657-7e7b"/>
         <infoLink name="Fly" id="48a0-1517-922c-a657" hidden="false" type="rule" targetId="ad49-ba01-620f-54f5"/>
         <infoLink name="Additional Hand Weapon" id="133e-aa3c-e98d-2a46" hidden="false" type="profile" targetId="836c-6f87-2540-ed02"/>
+        <infoLink name="Hand Weapon" id="1cc2-9db2-dc66-32d1" hidden="false" type="profile" targetId="2017-abc6-dba2-7bc2"/>
       </infoLinks>
       <rules>
         <rule name="Shoot on the Wing" id="0d5c-9d81-0726-f2c0" hidden="false">
@@ -2285,6 +2529,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
                 <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">3+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2340,6 +2585,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">3+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2388,6 +2634,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
                 <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2443,6 +2690,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2569,6 +2817,7 @@ This armour disregards opponents&apos; Strength modifiers in hand-to-hand combat
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">2+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2701,6 +2950,7 @@ Roll a dice after the magic cards are dealt.  On a score of 4+ you can remove o
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2797,6 +3047,7 @@ This is a potion which Lucrezzia can give to any character on her own side befor
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2846,6 +3097,7 @@ This is a potion which Lucrezzia can give to any character on her own side befor
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
                 <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">6</characteristic>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2936,6 +3188,7 @@ After deployment but before the first turn of the game, roll a dice to see what 
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">4+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3052,6 +3305,7 @@ In each hand-to-hand combat choose on opponent to lose D3 attacks.</description>
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">4+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3119,6 +3373,7 @@ In each hand-to-hand combat choose on opponent to lose D3 attacks.</description>
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">4+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3172,7 +3427,7 @@ In each hand-to-hand combat choose on opponent to lose D3 attacks.</description>
                 <infoLink name="Hand Weapon" id="89fd-6b5c-1727-9906" hidden="false" type="profile" targetId="2017-abc6-dba2-7bc2"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="New Entry" hidden="false" id="9ecf-2a6a-2c8c-0025">
+            <selectionEntry type="upgrade" import="true" name="Light Armour" hidden="false" id="9ecf-2a6a-2c8c-0025">
               <infoLinks>
                 <infoLink name="Light Armour" id="dc11-299c-1f36-f580" hidden="false" type="rule" targetId="eb59-f399-63e7-5c58"/>
               </infoLinks>
@@ -3258,6 +3513,7 @@ A swig from the gourd at the start of his turn will boost Marco&apos;s Strength 
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
                 <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3301,6 +3557,7 @@ A swig from the gourd at the start of his turn will boost Marco&apos;s Strength 
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3328,6 +3585,7 @@ A swig from the gourd at the start of his turn will boost Marco&apos;s Strength 
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3434,6 +3692,7 @@ This weapon has an extra -3 save modifier (-4 with Ghazak&apos;s Strength of 4) 
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">3/=</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3559,6 +3818,7 @@ This weapon has an extra -3 save modifier (-4 with Ghazak&apos;s Strength of 4) 
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3646,6 +3906,7 @@ If the Wolfboyz defeat their enemies in hand-to-hand combat, and elect to pursue
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">2</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">6</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
           </characteristics>
         </profile>
         <profile name="Giant Wolf" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="f299-ad6a-597d-8630">
@@ -3748,6 +4009,7 @@ If the Wolfboyz defeat their enemies in hand-to-hand combat, and elect to pursue
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">3+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3810,6 +4072,7 @@ If the Wolfboyz defeat their enemies in hand-to-hand combat, and elect to pursue
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">6</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">3+</characteristic>
           </characteristics>
         </profile>
         <profile name="Cold One" typeId="0a0f-00cd-0261-c0ea" typeName="Profile" hidden="false" id="2440-61af-d637-a289">
@@ -3905,6 +4168,7 @@ If the Wolfboyz defeat their enemies in hand-to-hand combat, and elect to pursue
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">9</characteristic>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3927,6 +4191,7 @@ If the Wolfboyz defeat their enemies in hand-to-hand combat, and elect to pursue
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4207,6 +4472,7 @@ Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In ad
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
+        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">2+</characteristic>
       </characteristics>
     </profile>
     <profile id="e877-5d7c-f21a-8cfa" name="Paymaster" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
@@ -4220,6 +4486,7 @@ Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In ad
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">4+</characteristic>
       </characteristics>
     </profile>
     <profile id="6e77-240c-7324-eef7" name="Sword" hidden="false" typeId="f529-f939-d9ca-197e" typeName="Melee Weapon">
@@ -4248,6 +4515,7 @@ Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In ad
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
       </characteristics>
     </profile>
     <profile id="8a7a-5dc3-7049-7ca7" name="Wizard" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
@@ -4261,6 +4529,7 @@ Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In ad
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff"/>
       </characteristics>
     </profile>
     <profile id="ace1-ca52-8432-149b" name="Wizard Champion" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
@@ -4313,6 +4582,7 @@ Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In ad
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">5+</characteristic>
       </characteristics>
     </profile>
     <profile id="b0dc-7a2d-e329-72d8" name="Money Lender" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
