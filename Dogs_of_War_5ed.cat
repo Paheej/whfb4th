@@ -193,6 +193,7 @@
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                 <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">2+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -401,7 +402,15 @@
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="c4d6-643e-c884-0e3d" childId="46f9-9d9c-3e6f-1b5c" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <constraints>
@@ -701,6 +710,11 @@
                 <condition type="lessThan" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="3def-b584-03e9-8f64" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="96c7-541f-4f0d-66f6" childId="d558-5bcb-503c-02e7" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -910,25 +924,15 @@
               <infoLinks>
                 <infoLink id="f494-7f86-4991-b575" name="Wizard" hidden="false" targetId="8a7a-5dc3-7049-7ca7" type="profile">
                   <modifiers>
-                    <modifier type="set" value="5+" field="c3d2-d217-9af4-f7ff">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
+                    <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                      </conditions>
                     </modifier>
-                    <modifier type="set" value="6+" field="c3d2-d217-9af4-f7ff">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
-                            <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
+                    <modifier type="set" value="-" field="c3d2-d217-9af4-f7ff">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                      </conditions>
                     </modifier>
                   </modifiers>
                 </infoLink>
@@ -961,25 +965,15 @@
               <infoLinks>
                 <infoLink id="da7c-bc31-048f-3ca4" name="Wizard Champion" hidden="false" targetId="ace1-ca52-8432-149b" type="profile">
                   <modifiers>
-                    <modifier type="set" value="5+" field="c3d2-d217-9af4-f7ff">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
+                    <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                      </conditions>
                     </modifier>
-                    <modifier type="set" value="6+" field="c3d2-d217-9af4-f7ff">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
-                            <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
+                    <modifier type="set" value="-" field="c3d2-d217-9af4-f7ff">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                      </conditions>
                     </modifier>
                   </modifiers>
                 </infoLink>
@@ -1012,25 +1006,15 @@
               <infoLinks>
                 <infoLink id="428e-e5d2-4999-4ef5" name="Master Wizard" hidden="false" targetId="7ca3-e761-5952-1d45" type="profile">
                   <modifiers>
-                    <modifier type="set" value="5+" field="c3d2-d217-9af4-f7ff">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
+                    <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                      </conditions>
                     </modifier>
-                    <modifier type="set" value="6+" field="c3d2-d217-9af4-f7ff">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
-                            <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
+                    <modifier type="set" value="-" field="c3d2-d217-9af4-f7ff">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                      </conditions>
                     </modifier>
                   </modifiers>
                 </infoLink>
@@ -1063,25 +1047,15 @@
               <infoLinks>
                 <infoLink id="788b-ac67-36d9-d235" name="Wizard Lord" hidden="false" targetId="ab43-034a-5454-68e5" type="profile">
                   <modifiers>
-                    <modifier type="set" value="5+" field="c3d2-d217-9af4-f7ff">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
+                    <modifier type="decrement" value="1" field="c3d2-d217-9af4-f7ff">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
+                      </conditions>
                     </modifier>
-                    <modifier type="set" value="6+" field="c3d2-d217-9af4-f7ff">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
-                            <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="f0a0-1e7b-1a70-0b11" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
+                    <modifier type="set" value="-" field="c3d2-d217-9af4-f7ff">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="aa69-34d7-af8b-e449" childId="037d-2df3-57e3-9168" shared="true"/>
+                      </conditions>
                     </modifier>
                   </modifiers>
                 </infoLink>
@@ -2443,7 +2417,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <characteristic name="Initiative" typeId="b418-0e30-644f-1435">3</characteristic>
                 <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1(+1)</characteristic>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff"/>
+                <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2475,7 +2449,7 @@ The horse and limber are removed when the gun is destroyed.</description>
                     <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
                     <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2(+1)</characteristic>
                     <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
-                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff"/>
+                    <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2531,6 +2505,13 @@ The horse and limber are removed when the gun is destroyed.</description>
                 <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
                 <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">3+</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="decrement" value="1" field="da3c-fb2b-4c5f-a22b">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="5942-2376-4ac4-f616" childId="any" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
         </selectionEntry>
@@ -3692,7 +3673,7 @@ This weapon has an extra -3 save modifier (-4 with Ghazak&apos;s Strength of 4) 
             <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
             <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">4</characteristic>
             <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">10</characteristic>
-            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">3/=</characteristic>
+            <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">3+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4529,7 +4510,7 @@ Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In ad
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
-        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff"/>
+        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
       </characteristics>
     </profile>
     <profile id="ace1-ca52-8432-149b" name="Wizard Champion" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
@@ -4543,6 +4524,7 @@ Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In ad
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">4</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">1</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
       </characteristics>
     </profile>
     <profile id="7ca3-e761-5952-1d45" name="Master Wizard" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
@@ -4556,6 +4538,7 @@ Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In ad
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">5</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">2</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">7</characteristic>
+        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
       </characteristics>
     </profile>
     <profile id="ab43-034a-5454-68e5" name="Wizard Lord" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
@@ -4569,6 +4552,7 @@ Wilhelm may add +2 to his Strength when fighting in hand-to-hand combat.  In ad
         <characteristic name="Initiative" typeId="b418-0e30-644f-1435">6</characteristic>
         <characteristic name="Attacks" typeId="fa03-f9a3-8117-98dd">3</characteristic>
         <characteristic name="Leadership" typeId="bbad-d421-400b-87c1">8</characteristic>
+        <characteristic name="Save" typeId="c3d2-d217-9af4-f7ff">6+</characteristic>
       </characteristics>
     </profile>
     <profile id="2261-8cb7-21e8-23e6" name="Ogre" hidden="false" typeId="0a0f-00cd-0261-c0ea" typeName="Profile">
